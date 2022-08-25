@@ -1,0 +1,23 @@
+@use "../utilities" as *;
+
+$paddings: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50; // insert value to create margin-[top, right, bottom, left] HERE
+
+@each $padding in $paddings {
+  .p-#{$padding} {
+    padding: rem($padding) !important;
+  }
+  .pt-#{$padding} {
+    padding-block-start: rem($padding) !important; // Padding Top
+  }
+  .pb-#{$padding} {
+    padding-block-end: rem($padding) !important; // Padding Bottom
+  }
+  .pl-#{$padding} {
+    padding-inline-start: rem($padding) !important; // Padding Left
+  }
+  .pr-#{$padding} {
+    padding-inline-end: rem($padding) !important; // Padding Right
+  }
+}
+
+/*Output will be: Ex pt-5, pr-5, pl-5, pb-5*/

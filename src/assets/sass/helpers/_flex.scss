@@ -1,0 +1,18 @@
+/*=================================FLEX=================================*/
+
+.d-flex {
+  display: flex !important;
+
+  &--v {
+    align-items: center !important;
+  }
+
+  &--h {
+    justify-content: center !important;
+  }
+
+  &--vh {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}

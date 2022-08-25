@@ -1,0 +1,20 @@
+.full-width {
+  box-shadow: 0 0 0 100vmax var(--background-clr);
+  clip-path: inset(0 -100vmax);
+}
+
+.nbsp {
+  white-space: nowrap;
+}
+
+.sr-only {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  border: 0;
+  inline-size: 1px; // Width
+  block-size: 1px; // Height
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}

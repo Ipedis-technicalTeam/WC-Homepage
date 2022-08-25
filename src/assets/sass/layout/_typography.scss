@@ -1,0 +1,32 @@
+@use "../theme" as *;
+@use "../utilities" as *;
+
+body {
+  font-family: $primaryFont;
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: normal;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: $secondaryFont;
+  font-weight: 700;
+  line-height: 1;
+  text-align: start;
+}
+
+h2 {
+  font-size: rem(32);
+
+  @include mq-rules($ps-mobile) {
+    font-size: rem(25);
+  }
+}
+
+main p {
+  font-size: rem(18);
+
+  @include mq-rules($ps-mobile) {
+    font-size: rem(16);
+  }
+}

@@ -1,0 +1,17 @@
+@use "sass:math";
+
+/*========== Convert Pixels to REM ==========*/
+
+@function rem($pixels) {
+  $rem: math.div($pixels, 16);
+
+  @return $rem * 1rem;
+}
+
+/*========== Convert Pixels to EM ==========*/
+
+@function em($pixels) {
+  $em: math.div($pixels, 16);
+
+  @return $em * 1em;
+}

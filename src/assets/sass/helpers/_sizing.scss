@@ -1,0 +1,11 @@
+.w-fit-content {
+  inline-size: fit-content; // Width
+}
+
+.h-auto {
+  block-size: auto !important; // Height
+}
+
+.reset-min-height {
+  min-block-size: unset; // Min Height
+}

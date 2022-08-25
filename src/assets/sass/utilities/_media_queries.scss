@@ -1,0 +1,5 @@
+@mixin mq-rules($size) {
+  @media #{$size} {
+    @content;
+  }
+}

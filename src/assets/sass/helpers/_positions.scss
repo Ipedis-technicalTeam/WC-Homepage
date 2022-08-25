@@ -1,0 +1,60 @@
+$positionValuesPercentage: 100;
+$positionValuesPixel: 0;
+
+/*POSITION*/
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+  inset-block-start: 0; // Top
+  inset-inline-start: 0; // Left
+
+  &--full {
+    inset: 0;
+  }
+}
+
+.p-fixed {
+  position: fixed;
+}
+
+/*TOP LEFT RIGHT POSITION*/
+
+@for $i from 1 through $positionValuesPercentage {
+  .pos-top-#{$i} {
+    inset-block-start: $i + 0%; // Top
+  }
+
+  .pos-bottom-#{$i} {
+    inset-block-end: $i + 0%; // Bottom
+  }
+
+  .pos-left-#{$i} {
+    inset-inline-start: $i + 0%; // Left
+  }
+
+  .pos-right-#{$i} {
+    inset-inline-end: $i + 0%; // Right
+  }
+}
+
+@each $pos in $positionValuesPixel {
+  .pos-top-#{$pos} {
+    inset-block-start: #{$pos}; // Top
+  }
+
+  .pos-bottom-#{$pos} {
+    inset-block-end: #{$pos}; // Bottom
+  }
+
+  .pos-left-#{$pos} {
+    inset-inline-start: #{$pos}; // Left
+  }
+
+  .pos-right-#{$pos} {
+    inset-inline-end: #{$pos}; // Right
+  }
+}

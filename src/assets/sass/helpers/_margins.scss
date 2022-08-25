@@ -1,0 +1,27 @@
+@use "../utilities" as *;
+
+$margins: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50; // insert value to create margin-[top, right, bottom, left] HERE
+
+@each $margin in $margins {
+  .m-#{$margin} {
+    margin: rem($margin) !important;
+  }
+  .mt-#{$margin} {
+    margin-block-start: rem($margin) !important; // Margin Top
+  }
+  .mb-#{$margin} {
+    margin-block-end: rem($margin) !important; // Margin Bottom
+  }
+  .ml-#{$margin} {
+    margin-inline-start: rem($margin) !important; // Margin Left
+  }
+  .mr-#{$margin} {
+    margin-inline-end: rem($margin) !important; // Margin Right
+  }
+}
+
+.m-auto {
+  margin: auto;
+}
+
+/*Output will be: Ex mt-5, mr-5, ml-5, mb-5*/
