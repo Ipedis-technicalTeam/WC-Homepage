@@ -6,17 +6,29 @@ $paddings: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50; // insert value to create m
   .p-#{$padding} {
     padding: rem($padding) !important;
   }
+
   .pt-#{$padding} {
     padding-block-start: rem($padding) !important; // Padding Top
   }
+
   .pb-#{$padding} {
     padding-block-end: rem($padding) !important; // Padding Bottom
   }
+
   .pl-#{$padding} {
     padding-inline-start: rem($padding) !important; // Padding Left
   }
+
   .pr-#{$padding} {
     padding-inline-end: rem($padding) !important; // Padding Right
+  }
+
+  .px-#{$padding} {
+    padding-inline: rem($padding) !important; // Padding Left and Right
+  }
+
+  .py-#{$padding} {
+    padding-block: rem($padding) !important; // Padding Top and Bottom
   }
 }
 

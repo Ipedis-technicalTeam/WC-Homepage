@@ -14,7 +14,7 @@
 
 ## command to generate icons
 
-**add svg file in [front/src/assets/icons] and launch command**
+**add svg file in [src/assets/icons] and launch command**
 
 `npm run icons`
 

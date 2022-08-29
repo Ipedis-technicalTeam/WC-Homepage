@@ -2,17 +2,27 @@
 @use "../utilities" as *;
 
 body {
-  font-family: $primaryFont;
+  font-family: $primaryFontRegular;
   font-size: rem(16);
-  font-weight: 400;
+  font-weight: normal;
   line-height: normal;
 }
 
+strong {
+  font-family: $primaryFontMedium;
+  font-weight: normal;
+}
+
 :where(h1, h2, h3, h4, h5, h6) {
-  font-family: $secondaryFont;
-  font-weight: 700;
+  font-family: $primaryFontBold;
+  font-weight: normal;
   line-height: 1;
   text-align: start;
+
+  strong {
+    font-family: inherit;
+    font-weight: 700;
+  }
 }
 
 h2 {

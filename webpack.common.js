@@ -42,14 +42,17 @@ module.exports = {
       {
         path: path.join(__dirname, "./src/partials/header.html"),
         template_filename: "index.html",
+        location: "root",
       },
       {
         path: path.join(__dirname, "./src/partials/body.html"),
         template_filename: "index.html",
+        location: "root",
       },
       {
         path: path.join(__dirname, "./src/partials/footer.html"),
         template_filename: "index.html",
+        location: "root",
       },
     ]),
   ],

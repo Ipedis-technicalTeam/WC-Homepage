@@ -18,10 +18,18 @@ $margins: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50; // insert value to create ma
   .mr-#{$margin} {
     margin-inline-end: rem($margin) !important; // Margin Right
   }
+
+  .mx-#{$margin} {
+    margin-inline: rem($margin) !important; // Margin Left and Right
+  }
+
+  .my-#{$margin} {
+    margin-block: rem($margin) !important; // Margin Top and Bottom
+  }
 }
 
 .m-auto {
-  margin: auto;
+  margin-inline: auto; // Margin Left and Right
 }
 
 /*Output will be: Ex mt-5, mr-5, ml-5, mb-5*/
