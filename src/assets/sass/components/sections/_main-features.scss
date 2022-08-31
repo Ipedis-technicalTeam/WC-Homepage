@@ -1,0 +1,24 @@
+@use "../../theme" as *;
+@use "../../utilities" as *;
+
+.main-features {
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(rem(420), 100%), 1fr));
+    grid-auto-rows: 1fr;
+    gap: rem(40);
+
+    .feature {
+      flex-direction: column;
+      gap: rem(30);
+
+      .icon-wrapper {
+        inline-size: rem(75); // Width
+        block-size: rem(75); // Height
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: $secondaryColor;
+      }
+    }
+  }
+}

@@ -15,7 +15,7 @@ module.exports = {
 
       // ASSETS LOADER
       {
-        test: /\.(png|svg|jpe?g|webp|pdf)$/i,
+        test: /\.(png|svg|jpe?g|webp|pdf)/i,
         type: "asset/resource",
         generator: {
           filename: "./assets/images/[name][ext]",
@@ -40,18 +40,54 @@ module.exports = {
 
     new HtmlWebpackPartialsPlugin([
       {
-        path: path.join(__dirname, "./src/partials/header.html"),
+        path: path.join(__dirname, "./src/partials/Navigation.html"),
         template_filename: "index.html",
+        inject: true,
         location: "root",
       },
       {
-        path: path.join(__dirname, "./src/partials/body.html"),
+        path: path.join(__dirname, "./src/partials/Header.html"),
         template_filename: "index.html",
+        inject: true,
         location: "root",
       },
       {
-        path: path.join(__dirname, "./src/partials/footer.html"),
+        path: path.join(__dirname, "./src/partials/Main.html"),
         template_filename: "index.html",
+        inject: true,
+        location: "root",
+      },
+      {
+        path: path.join(
+          __dirname,
+          "./src/partials/sections/Main_Features.html"
+        ),
+        template_filename: "index.html",
+        inject: true,
+        location: "main",
+      },
+      {
+        path: path.join(
+          __dirname,
+          "./src/partials/sections/Recent_Components.html"
+        ),
+        template_filename: "index.html",
+        inject: true,
+        location: "main",
+      },
+      {
+        path: path.join(
+          __dirname,
+          "./src/partials/sections/Recent_Templates.html"
+        ),
+        template_filename: "index.html",
+        inject: true,
+        location: "main",
+      },
+      {
+        path: path.join(__dirname, "./src/partials/Footer.html"),
+        template_filename: "index.html",
+        inject: true,
         location: "root",
       },
     ]),

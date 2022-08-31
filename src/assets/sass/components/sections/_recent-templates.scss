@@ -1,0 +1,35 @@
+@use "../../theme" as *;
+@use "../../utilities" as *;
+
+.recent-templates {
+  .content {
+    block-size: 100%; // Height
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(rem(670 - 50), 100%), 1fr)
+    );
+    grid-auto-rows: 1fr;
+    gap: rem(50);
+    align-items: center;
+  }
+
+  // BLOCK TEXT
+  .block-text {
+    flex-direction: column;
+    gap: rem(40);
+
+    .title {
+      max-inline-size: 60ch;
+    }
+  }
+
+  // BLOCK IMAGE
+  .block-image {
+    max-width: max(50%, 100%);
+
+    img {
+      width: 100%;
+    }
+  }
+}

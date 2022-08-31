@@ -1,0 +1,20 @@
+@use "../theme" as *;
+@use "../utilities" as *;
+
+.footer {
+  background-color: $footerBackgroundColor;
+  color: $footerTextColor;
+  block-size: $navHeight; // Height
+
+  // CONTAINER
+  .container {
+    block-size: 100%; // Height
+    justify-content: space-between;
+  }
+
+  // LOGO
+  .logo-wrapper {
+    max-inline-size: rem(120); // Max Width
+    max-block-size: rem(45); // Max Height
+  }
+}

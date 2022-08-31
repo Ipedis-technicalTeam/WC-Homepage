@@ -1,0 +1,104 @@
+@use "../theme/" as *;
+@use "../utilities" as *;
+
+* {
+  --focus-color: currentColor;
+
+  &:focus,
+  &:focus-visible {
+    outline-offset: em(5);
+    outline: 2px solid var(--focus-color);
+    transition: 0.35s ease-in-out;
+  }
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ol,
+ul,
+li,
+article,
+footer,
+header,
+menu,
+nav,
+section,
+summary,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body,
+#root {
+  display: block;
+  min-height: $headerHeight;
+  background-color: $bodyBackgroundColor;
+  color: $bodyTextColor;
+}
+
+main {
+  background-color: $mainBackgroundColor;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+a,
+button,
+input[type="submit"] {
+  all: unset;
+  display: block;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  transition: text-decoration $transition-in-out;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+
+  .navigation &,
+  &.btn {
+    &:hover,
+    &:focus-visible {
+      text-decoration: none;
+    }
+  }
+}
+
+section,
+[class^="section"] {
+  padding-block: 15vmin; // Padding Top and Bottom
+}

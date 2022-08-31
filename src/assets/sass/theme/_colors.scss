@@ -1,4 +1,4 @@
-@use "../utilities/fade" as *;
+@use "../utilities" as *;
 
 /*______________________________________________________________________
   ------------------------------ COLORS --------------------------------
@@ -6,24 +6,44 @@
 
 /* Main Colors
 ----------------------------------*/
-$primaryColor: #e34405;
-$secondaryColor: #0066d3;
+$primaryColor: #b00057;
+$secondaryColor: #0f8570;
+$tertiaryColor: #2d2b6a;
 
 /* Neutral Colors
 ----------------------------------*/
 $lightColor: #ffffff;
-$darkColor: #1f1f1f;
+$paleGreyColor: #efefef;
+$greyColor: #5f5f61;
+$darkColor: #2e3243;
 
 /* General Colors
 ----------------------------------*/
 $bodyBackgroundColor: $lightColor;
-// $bodyTextColor: contrast($bodyBackgroundColor, $lightColor, $darkColor);
+$bodyTextColor: contrast($bodyBackgroundColor, $lightColor, $darkColor);
 
 $navBackgroundColor: $lightColor;
-// $navTextColor: contrast($navBackgroundColor, $lightColor, $darkColor);
+$navTextColor: contrast($navBackgroundColor, $lightColor, $darkColor);
 
-$headerBackgroundColor: fade(darken($darkColor, 100), 70);
-// $headerTextColor: contrast($headerBackgroundColor, $lightColor, $darkColor);
+$headerBackgroundColor: $secondaryColor;
+$headerTextColor: contrast($headerBackgroundColor, $lightColor, $darkColor);
 
-$footerBackgroundColor: $darkColor;
-// $footerTextColor: contrast($footerBackgroundColor, $lightColor, $darkColor);
+$mainBackgroundColor: $bodyBackgroundColor;
+$mainTextColor: contrast(
+  $mainBackgroundColor,
+  fade($lightColor, 70),
+  $greyColor
+);
+
+$recentComponentBackgroundColor: $tertiaryColor;
+$recentComponentTextColor: contrast(
+  $recentComponentBackgroundColor,
+  $lightColor,
+  $darkColor
+);
+
+$cardBackgroundColor: $recentComponentTextColor;
+$cardTextColor: contrast($cardBackgroundColor, $lightColor, $darkColor);
+
+$footerBackgroundColor: $tertiaryColor;
+$footerTextColor: contrast($footerBackgroundColor, $lightColor, $darkColor);

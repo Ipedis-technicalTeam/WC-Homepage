@@ -1,0 +1,60 @@
+@use "../theme" as *;
+@use "../utilities" as *;
+
+.header {
+  color: $headerTextColor;
+  background-color: $bodyBackgroundColor;
+  background-image: url("../images/background.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-block-size: $headerHeight; // Height
+  padding-block-start: $navHeight;
+
+  @include mq-rules($ps-mobile) {
+    color: $headerTextColor;
+    background-color: $headerBackgroundColor;
+    block-size: auto; // Height
+  }
+
+  // CONTAINER
+  .container {
+    block-size: 100%; // Height
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(rem(670 - 50), 100%), 1fr)
+    );
+    grid-auto-rows: 1fr;
+    gap: rem(50);
+    padding-block: 10vmin;
+
+    @include mq-rules($ps-mobile) {
+      grid-auto-rows: auto;
+    }
+  }
+
+  // BLOCK TEXT
+  .block-text {
+    flex-direction: column;
+    gap: rem(40);
+    height: fit-content;
+
+    .title {
+      max-inline-size: 60ch;
+    }
+  }
+
+  // BLOCK IMAGE
+  .block-image {
+    max-width: max(50%, 100vw);
+
+    img {
+      width: 100%;
+    }
+
+    @include mq-rules($ps-mobile) {
+      margin-inline: -$containerPadding;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+@use "../theme" as *;
+@use "../utilities" as *;
+
+.navigation {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  background-color: $navBackgroundColor;
+  color: $navTextColor;
+  block-size: $navHeight; // Height
+  z-index: 9999;
+
+  // CONTAINER
+  .container {
+    block-size: 100%; // Height
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: rem(20);
+  }
+
+  // LOGO
+  .logo-wrapper {
+    max-inline-size: rem(150); // Max Width
+    max-block-size: rem(50); // Max Height
+  }
+
+  // MENU
+  .menu {
+    justify-self: center;
+    block-size: 100%; // Height
+    gap: rem(20);
+
+    .link {
+      block-size: 100%; // Height
+      position: relative;
+      isolation: isolate;
+      transition: color $transition-in-out;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset-inline: 0; // Left and Right
+        inset-block-end: 0; // Bottom
+        inline-size: 100%; // Width
+        block-size: 0; // Height
+        background-color: $primaryColor;
+        transition: block-size $transition-in-out;
+        pointer-events: none;
+      }
+
+      &.active,
+      &:hover,
+      &:focus-within {
+        color: $primaryColor;
+
+        &::before {
+          block-size: rem(5);
+        }
+      }
+    }
+  }
+
+  // LANGUAGES
+  .languages {
+    gap: rem(10);
+
+    .lang {
+      transition: color $transition-in-out;
+
+      &.active,
+      &:hover,
+      &:focus-within {
+        color: $primaryColor;
+      }
+    }
+
+    .separator {
+      position: relative;
+      block-size: rem(25); // Height
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset-block: 0; // Top and Bottom
+        inset-inline-start: 0; // Left
+        inline-size: rem(1); // Width
+        background-color: currentColor;
+        opacity: 0.2;
+      }
+    }
+  }
+}
