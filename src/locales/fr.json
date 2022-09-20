@@ -1,0 +1,34 @@
+{
+  "skip-link": {
+    "nav": {
+      "label": "Aller vers la navigation",
+      "text": "Aller vers nav"
+    },
+
+    "content": {
+      "label": "Aller vers le contenu",
+      "text": "Aller vers contenu"
+    }
+  },
+
+  "head": {
+    "title": "Webpack Boilerplate | FR"
+  },
+
+  "navigation": {
+    "heading": "French Navigation",
+    "btn": "Switch to En"
+  },
+
+  "header": {
+    "heading": "French Header"
+  },
+
+  "main": {
+    "heading": "French Main"
+  },
+
+  "footer": {
+    "heading": "French Footer"
+  }
+}

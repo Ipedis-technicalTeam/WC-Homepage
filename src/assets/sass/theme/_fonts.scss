@@ -1,24 +1,24 @@
 @font-face {
-  font-family: "Roboto-Regular";
-  src: url("../fonts/Roboto-Regular.woff") format("woff");
+  font-family: 'OpenSans-Regular';
+  src: url('../fonts/OpenSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Roboto-Medium";
-  src: url("../fonts/Roboto-Medium.woff") format("woff");
+  font-family: 'OpenSans-Bold';
+  src: url('../fonts/OpenSans-Bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Roboto-Bold";
-  src: url("../fonts/Roboto-Bold.woff") format("woff");
+  font-family: 'Nunito-Bold';
+  src: url('../fonts/Nunito-Bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
-$primaryFontRegular: "Roboto-Regular", sans-serif;
-$primaryFontMedium: "Roboto-Medium", sans-serif;
-$primaryFontBold: "Roboto-Bold", sans-serif;
+$primaryFontRegular: 'OpenSans-Regular', sans-serif;
+$primaryFontBold: 'OpenSans-Bold', sans-serif;
+$secondaryFontBold: 'Nunito-Bold', sans-serif;

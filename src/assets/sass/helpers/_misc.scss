@@ -1,7 +1,5 @@
-.full-width {
-  box-shadow: 0 0 0 100vmax var(--background-clr);
-  clip-path: inset(0 -100vmax);
-}
+@use '../theme' as *;
+@use '../utilities' as *;
 
 .nbsp {
   white-space: nowrap;
@@ -17,4 +15,19 @@
   overflow: hidden;
   padding: 0;
   white-space: nowrap;
+}
+
+.separator {
+  position: relative;
+  block-size: em(25);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 1px;
+    block-size: 100%;
+    background-color: currentColor;
+  }
 }

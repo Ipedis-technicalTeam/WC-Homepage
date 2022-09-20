@@ -1,95 +1,49 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const HtmlWebpackPartialsPlugin = require("html-webpack-partials-plugin");
+const path = require('path');
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
+const htmlPartialsPageNames = require('./src/partials').htmlPartialsPageNames;
+
+let multipleHtmlPartialsPlugins = htmlPartialsPageNames.map(name => {
+  return {
+    path: path.join(__dirname, `./src/partials/${name}.html`),
+    template_filename: 'index.html',
+    inject: true,
+    location: 'root',
+  };
+});
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    index: './src/index.js',
+  },
 
   module: {
     rules: [
-      // HTML LOADER
+      // // ASSETS LOADER
       {
-        test: /\.html$/i,
-        loader: "html-loader",
-      },
-
-      // ASSETS LOADER
-      {
-        test: /\.(png|svg|jpe?g|webp|pdf)/i,
-        type: "asset/resource",
+        test: /\.(png|svg|jpe?g|webp|pdf)$/i,
+        type: 'asset/resource',
         generator: {
-          filename: "./assets/images/[name][ext]",
+          filename: './assets/images/[name][ext]',
         },
       },
       {
         test: /\.(woff(2)?|ttf|otf|eot)(\?v=\d+\.\d+\.\d+)?$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
         generator: {
-          filename: "./assets/fonts/[name][ext]",
+          filename: './assets/fonts/[name][ext]',
         },
       },
     ],
   },
 
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      filename: "index.html",
-      minify: true,
-    }),
+  resolve: {
+    fallback: {
+      fs: false,
+    },
+  },
 
-    new HtmlWebpackPartialsPlugin([
-      {
-        path: path.join(__dirname, "./src/partials/Navigation.html"),
-        template_filename: "index.html",
-        inject: true,
-        location: "root",
-      },
-      {
-        path: path.join(__dirname, "./src/partials/Header.html"),
-        template_filename: "index.html",
-        inject: true,
-        location: "root",
-      },
-      {
-        path: path.join(__dirname, "./src/partials/Main.html"),
-        template_filename: "index.html",
-        inject: true,
-        location: "root",
-      },
-      {
-        path: path.join(
-          __dirname,
-          "./src/partials/sections/Main_Features.html"
-        ),
-        template_filename: "index.html",
-        inject: true,
-        location: "main",
-      },
-      {
-        path: path.join(
-          __dirname,
-          "./src/partials/sections/Recent_Components.html"
-        ),
-        template_filename: "index.html",
-        inject: true,
-        location: "main",
-      },
-      {
-        path: path.join(
-          __dirname,
-          "./src/partials/sections/Recent_Templates.html"
-        ),
-        template_filename: "index.html",
-        inject: true,
-        location: "main",
-      },
-      {
-        path: path.join(__dirname, "./src/partials/Footer.html"),
-        template_filename: "index.html",
-        inject: true,
-        location: "root",
-      },
-    ]),
+  plugins: [
+    // PARTIALS HTML
+    new HtmlWebpackPartialsPlugin([...multipleHtmlPartialsPlugins]),
   ],
 };

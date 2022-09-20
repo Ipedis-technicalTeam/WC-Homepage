@@ -1,0 +1,26 @@
+{
+  "skip-link": {
+    "nav": {
+      "label": "Go to navigation",
+      "text": "Go to nav"
+    },
+    "content": {
+      "label": "Go to content",
+      "text": "Go to content"
+    }
+  },
+
+  "head": {
+    "title": "Web Components"
+  },
+
+  "logo": {
+    "alt": "Ipedis - Go to Ipedis Website",
+    "link": "https://www.ipedis.com/en"
+  },
+
+  "header": {
+    "title": "Web Components",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt augue quis odio pharetra auctor. Nunc tempor velit eget quam tincidunt venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  }
+}

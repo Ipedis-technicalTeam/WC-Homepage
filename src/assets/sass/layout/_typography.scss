@@ -1,115 +1,71 @@
-@use "../theme" as *;
-@use "../utilities" as *;
+@use '../theme' as *;
+@use '../utilities' as *;
 
-// BODY
 body {
-  font-family: $primaryFontRegular;
   font-size: rem(18);
-  font-weight: 400;
-  line-height: 1.4em;
+  font-family: $primaryFontRegular;
+  font-weight: normal;
+  line-height: normal;
   text-align: start;
 
-  @include mq-rules($ps-mobile) {
+  @include mq($ps-mobile) {
     font-size: rem(16);
   }
 }
 
-strong {
-  font-family: $primaryFontMedium;
-  font-weight: normal;
-}
-
-// HEADINGS
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: $primaryFontBold;
+  font-family: $secondaryFontBold;
   font-weight: normal;
-  line-height: 1.25em;
+  line-height: 1.2;
   text-align: start;
-  margin-block-start: 0; // Margin Top
-  margin-block-end: 0.67em; // Margin Bottom
+}
 
-  strong {
-    font-family: inherit;
-    font-weight: 700;
+h1 {
+  font-size: rem(32);
+
+  @include mq($ps-mobile) {
+    font-size: rem(25);
   }
 }
 
-.heading {
-  .main-content & {
-    font-size: rem(45);
-    text-align: center;
-    position: relative;
-    isolation: isolate;
-    margin-block-end: calc(1em + rem(75)); // Margin Bottom
+h2 {
+  font-size: rem(24);
+  margin-block-end: rem(20);
 
-    @include mq-rules($ps-mobile) {
-      font-size: rem(30);
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-color: $secondaryColor;
-      inset-inline: 0; // Left and Right
-      inset-block-end: -1em; // Bottom
-      inline-size: rem(200); // Width
-      block-size: rem(2); // Height
-      margin-inline: auto; // Margin Left and Right
-    }
-
-    &:last-child {
-      margin-block-end: 0; // Margin Bottom
-    }
+  @include mq($ps-mobile) {
+    font-size: rem(20);
   }
 }
 
 h3 {
-  font-size: rem(25);
+  font-size: rem(24);
 
-  @include mq-rules($ps-mobile) {
-    font-size: rem(22);
+  @include mq($ps-mobile) {
+    font-size: rem(20);
   }
 }
-
-// PARAGRAPH
 
 p {
-  .main-content & {
-    color: $mainTextColor;
-    margin-block-end: rem(10); // Margin Bottom
+  line-height: 1.333em;
 
-    &:last-child {
-      margin-block-end: 0; // Margin Bottom
-    }
+  header & {
+    max-inline-size: 100ch;
   }
 }
 
-.navigation {
-  font-family: $primaryFontMedium;
-  font-size: rem(14);
-  text-transform: uppercase;
-}
+a {
+  transition: all $transition-in-out;
 
-// TITLE
-.title {
-  .header & {
-    font-size: rem(50);
-
-    @include mq-rules($ps-mobile) {
-      font-size: rem(40);
-    }
-  }
-
-  .recent-templates & {
-    font-size: rem(38);
-
-    @include mq-rules($ps-mobile) {
-      font-size: rem(25);
+  footer &:nth-child(2) {
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      text-decoration: underline;
     }
   }
 }

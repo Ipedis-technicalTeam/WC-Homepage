@@ -1,9 +1,9 @@
-@use "../utilities" as *;
-@use "../theme" as *;
+@use '../utilities' as *;
+@use '../theme' as *;
 
 .container {
-  // Try to keep 1920px width until screen is too small
-  width: min(calc(90% - $containerPadding), rem(1920 - (290 * 2)));
+  // Try to keep 960px width until screen is too small
+  inline-size: min(calc(80% - $containerPadding), rem(1340));
 
   // Margin Left and Right auto
   margin-inline: auto;

@@ -1,20 +1,14 @@
-@use "../theme" as *;
-@use "../utilities" as *;
+@use '../theme' as *;
+@use '../utilities' as *;
 
-.footer {
+footer {
   background-color: $footerBackgroundColor;
   color: $footerTextColor;
-  block-size: $navHeight; // Height
 
-  // CONTAINER
   .container {
-    block-size: 100%; // Height
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-  }
-
-  // LOGO
-  .logo-wrapper {
-    max-inline-size: rem(120); // Max Width
-    max-block-size: rem(45); // Max Height
+    block-size: $navHeight;
   }
 }

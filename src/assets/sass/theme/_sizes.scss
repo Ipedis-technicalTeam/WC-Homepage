@@ -1,8 +1,8 @@
-@use "../utilities" as *;
+@use '../utilities' as *;
 
 /******* HEIGHTS *******/
 $navHeight: rem(80);
-$headerHeight: 80vh;
+$headerHeight: 100vh;
 
 /******* PADDINGS *******/
-$containerPadding: rem(32);
+$containerPadding: rem(30);

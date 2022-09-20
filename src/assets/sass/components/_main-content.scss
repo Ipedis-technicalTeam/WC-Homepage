@@ -1,0 +1,22 @@
+@use '../theme' as *;
+@use '../utilities' as *;
+
+main {
+  .container {
+    display: grid;
+    grid-template-columns: min(rem(360), 100%) 1fr;
+    grid-auto-rows: 1fr;
+    align-items: center;
+    gap: rem(40);
+    min-block-size: $headerHeight;
+    // padding-block: 10vh;
+  }
+
+  .sidebar-menu {
+    block-size: min(rem(1162), 100%);
+  }
+
+  .cards-wrapper {
+    block-size: 100%;
+  }
+}
