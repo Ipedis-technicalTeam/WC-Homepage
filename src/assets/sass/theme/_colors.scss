@@ -6,8 +6,8 @@
 
 /* Main Colors
 ----------------------------------*/
-$primaryColor: #b00057;
-$secondaryColor: #0f8570;
+$primaryColor: #0f8570;
+$secondaryColor: #b00057;
 
 /* Neutral Colors
 ----------------------------------*/
@@ -19,7 +19,7 @@ $darkColor: #2e3243;
 $bodyBackgroundColor: $lightColor;
 $bodyTextColor: contrast($bodyBackgroundColor, $lightColor, $darkColor);
 
-$headerBackgroundColor: $secondaryColor;
+$headerBackgroundColor: $primaryColor;
 $headerTextColor: contrast($headerBackgroundColor, $lightColor, $darkColor);
 
 $sidebarBackgroundColor: $darkColor;
@@ -27,6 +27,9 @@ $sidebarTextColor: contrast($sidebarBackgroundColor, $lightColor, $darkColor);
 
 $cardBackgroundColor: $lightColor;
 $cardTextColor: contrast($cardBackgroundColor, $lightColor, $darkColor);
+
+$tabBackgroundColor: $lightColor;
+$tabTextColor: contrast($tabBackgroundColor, $lightColor, $darkColor);
 
 $footerBackgroundColor: $darkColor;
 $footerTextColor: contrast($footerBackgroundColor, $lightColor, $darkColor);

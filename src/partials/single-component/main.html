@@ -1,0 +1,55 @@
+<!-- MAIN START -->
+<main>
+  <section>
+    <div class="container">
+      <ip-tab-panel
+        tab-panel-title="Slider style 1"
+        tab-panel-headers='[
+          {"title":"Preview", "imgPath": "assets/icons/google-plus.svg", "imgPathActive": "assets/icons/google-plus.svg"},
+          {"alt":"Code", "imgPath": "assets/icons/instagram.svg", "imgPathActive": "assets/icons/instagram.svg"},
+          {"alt":"Accessibility", "imgPath": "assets/icons/down.svg", "imgPathActive": "assets/icons/down.svg"}
+        ]'
+      >
+        <div class="ip-content" slot="tab-content-1">
+          <ip-tab-panel
+            tab-panel-headers='[{"title":"Accessibilité", "imgPath": "assets/icons/acc-1.svg", "imgPathActive": "assets/icons/acc-1-active.svg"}]'
+          >
+            <div class="ip-content" slot="tab-content-1">
+              <img src="assets/images/tab-img-1.png" alt="" />
+              <div class="ip-content-desc">
+                <h2 class="ip-content-title">Accessibilité</h2>
+                <h3 class="ip-content-subtitle">6 Bonnes Pratiques pour être en Conformité</h3>
+                <p class="ip-content-text">
+                  Aujourd’hui, encore beaucoup de sites Web et d’applications mobiles sont conçus
+                  sans penser à la navigation des personnes en situation de handicap. Pourtant, pour
+                  ces personnes, l’outil digital représente un véritable levier d’intégration, et
+                  leur apporte bien souvent un surcroît d’indépendance.Selon les différents types de
+                  handicaps, les manquements les plus couramment relevés sur le Web ne sont pas les
+                  mêmes.
+                </p>
+                <button
+                  class="ip-content-btn"
+                  aria-label="En savoir plus, 6 Bonnes Pratiques pour être en Conformité"
+                >
+                  En savoir plus
+                  <img src="assets/icons/right.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </ip-tab-panel>
+        </div>
+
+        <div class="ip-content" slot="tab-content-2">
+          <ip-tab-panel
+            tab-panel-headers='[{"title":"HTML"}, {"title": "CSS"}, {"title": "Javascript"}]'
+          ></ip-tab-panel>
+        </div>
+
+        <div class="ip-content" slot="tab-content-3">
+          <h4>Hello World</h4>
+        </div>
+      </ip-tab-panel>
+    </div>
+  </section>
+</main>
+<!-- MAIN END -->

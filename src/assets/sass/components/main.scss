@@ -1,9 +1,11 @@
 /*===== Import Components Here using @forward =====*/
 
 // e.g. @forward "./button";
+@forward './root';
 @forward './skip-link';
 @forward './header';
 @forward './main-content';
 @forward './footer';
 @forward './cards';
 @forward './sidebar-menu';
+@forward './tab-panel';

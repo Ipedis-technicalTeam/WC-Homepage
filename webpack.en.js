@@ -17,5 +17,12 @@ module.exports = merge(prod, {
       title: EN.head.title,
       lang: 'en',
     }),
+
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, './src/single-component.html'),
+      filename: 'single-component.html',
+      title: EN.head.title,
+      lang: 'en',
+    }),
   ],
 });

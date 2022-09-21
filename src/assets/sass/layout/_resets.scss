@@ -51,24 +51,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body,
-#root {
-  display: block;
-  inline-size: 100%; // Width
-  min-block-size: 100vh; // Min-Height
-  // background-color: $bodyBackgroundColor;
-  // color: $bodyTextColor;
-
-  background-color: $headerBackgroundColor;
-  color: $headerTextColor;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: auto;
-  grid-auto-flow: row;
-  gap: rem(60);
-}
-
 ol,
 ul {
   list-style: none;

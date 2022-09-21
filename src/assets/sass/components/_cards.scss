@@ -16,18 +16,19 @@
     border-radius: rem(15);
     border: 2px solid $cardBackgroundColor;
     will-change: transform;
-    transition: all $transition-in-out;
+    transition: transform $transition-in-out;
     overflow: hidden;
 
     &:hover,
     &:focus-within {
-      transform: scale(1.025);
+      transform: scale(1.03);
+      transition: transform $transition-in-out, outline $transition-in-out,
+        outline-offset $transition-in-out;
     }
 
     &:focus-within {
       outline-offset: em(5);
       outline: 2px solid var(--focus-color);
-      transition: all $transition-in-out;
     }
 
     .image-wrapper {
@@ -41,7 +42,8 @@
         inline-size: 100%;
         max-block-size: 100%;
         max-inline-size: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        aspect-ratio: 16/9;
       }
     }
 
@@ -54,9 +56,9 @@
     }
 
     .icon-wrapper {
-      inline-size: rem(30);
-      block-size: rem(30);
-      aspect-ratio: 1/1;
+      --icon-size: #{rem(45)};
+      inline-size: var(--icon-size);
+      block-size: var(--icon-size);
 
       img {
         block-size: 100%;
@@ -64,6 +66,7 @@
         max-block-size: 100%;
         max-inline-size: 100%;
         object-fit: contain;
+        aspect-ratio: 1/1;
       }
     }
   }

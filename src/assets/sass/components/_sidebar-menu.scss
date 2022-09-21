@@ -7,6 +7,26 @@
   padding: rem(30);
   border-radius: rem(15);
 
+  > h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline-end: rem(10);
+
+    span {
+      display: grid;
+      place-items: center;
+      inline-size: 100%;
+      max-inline-size: 1em;
+      aspect-ratio: 1/1;
+
+      img {
+        max-block-size: 100%;
+        max-inline-size: 100%;
+      }
+    }
+  }
+
   > ul {
     border-block-end: 1px solid fade($lightColor, 20);
     padding-block-end: rem(30);
@@ -27,7 +47,6 @@
       padding-block: rem(15);
       padding-inline: rem(20);
       border-radius: rem(5);
-
       overflow: hidden;
       cursor: pointer;
 
@@ -42,7 +61,8 @@
         inset-inline-start: 0;
         inline-size: 0;
         block-size: 100%;
-        background-color: $secondaryColor;
+        background-color: $primaryColor;
+        pointer-events: none;
       }
 
       &[aria-current='true'],
@@ -51,11 +71,19 @@
       &:focus-visible {
         background-color: fade(darken($darkColor, 100), 30);
         color: contrast(fade(darken($darkColor, 100), 30), $lightColor, $darkColor);
+
+        &::before {
+          inline-size: rem(5);
+        }
+      }
+
+      &:hover,
+      &:focus,
+      &:focus-visible {
         transition: background-color $transition-in-out, color $transition-in-out,
           outline-offset $transition-in-out;
 
         &::before {
-          inline-size: rem(5);
           transition: inline-size $transition-in-out;
         }
       }

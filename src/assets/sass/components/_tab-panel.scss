@@ -1,0 +1,138 @@
+@use '../theme' as *;
+@use '../utilities' as *;
+
+ip-tab-panel {
+  --tab-primary-color: #{$darkColor};
+  --tab-active-text-color: #{$lightColor};
+  --tab-panel-text-color: #{$tabTextColor};
+  --tab-header-border: 0;
+  --tab-btn-direction: row;
+  --tab-br: 0;
+  //   --tab-padding: #{rem(10)};
+  --gap: #{rem(18)};
+
+  --tab-header-border-color: #{darken($tabBackgroundColor, 9)};
+  //   --tab-header-justify: flex-end;
+
+  display: block;
+  inline-size: 100%;
+  block-size: rem(875);
+  background-color: $tabBackgroundColor;
+  border-radius: rem(15);
+  box-shadow: 0 0 rem(12) fade(darken($darkColor, 100), 25);
+  overflow: hidden;
+  box-sizing: border-box;
+
+  > .ip-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darken($tabBackgroundColor, 3);
+    block-size: auto;
+    max-block-size: rem(875) - rem(73);
+    border-block-start: 2px solid darken($tabBackgroundColor, 9);
+    padding-block: rem(50);
+    padding-inline: rem(75);
+    box-sizing: border-box;
+
+    ip-tab-panel {
+      --tab-primary-color: #{$secondaryColor};
+      --tab-active-text-color: #{contrast($secondaryColor, $lightColor, $darkColor)};
+      --tab-panel-text-color: #{$darkColor};
+      --tab-header-justify: center;
+      --tab-header-border: 1px;
+      --tab-header-border-color: #{$secondaryColor};
+      --tab-btn-direction: column;
+      --tab-br: #{rem(10) rem(10) 0 0};
+      --gap: #{rem(10)};
+
+      display: contents;
+      inline-size: 100%;
+      block-size: 100%;
+      background-color: unset;
+      border-radius: 0;
+      box-shadow: none;
+      overflow: visible;
+    }
+  }
+
+  [slot='tab-content-1'] {
+    ip-tab-panel {
+      .ip-content {
+        margin: 0 0;
+        display: flex;
+      }
+
+      .ip-content img {
+        border-radius: 10px;
+      }
+
+      .ip-content .ip-content-desc {
+        margin-left: 50px;
+        margin-right: 25px;
+      }
+
+      .ip-content .ip-content-title {
+        margin-top: 35px;
+        font-family: Avenir-Heavy;
+        font-size: 18px;
+        color: var(--tab-primary-color);
+        text-transform: uppercase;
+      }
+
+      .ip-content .ip-content-subtitle {
+        margin-top: 15px;
+        font-family: Avenir-Heavy;
+        font-size: 42px;
+        color: var(--tab-primary-color);
+      }
+
+      .ip-content .ip-content-text {
+        margin-top: 20px;
+        font-family: Avenir-Book;
+        font-size: 18px;
+        color: #2e3243;
+      }
+
+      .ip-content .ip-content-btn {
+        margin-top: 20px;
+        font-family: Avenir-Heavy;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: var(--tab-primary-color);
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      .ip-content .ip-content-btn img {
+        margin-left: 15px;
+        width: 14px;
+        height: 15px;
+      }
+
+      .tab-panel {
+        max-width: 1080px;
+        margin: 100px auto;
+      }
+    }
+  }
+
+  [slot='tab-content-2'] {
+    ip-tab-panel {
+      --tab-primary-color: #{$tabBackgroundColor};
+      --tab-active-text-color: #{$tabTextColor};
+      --tab-panel-text-color: #{$tabTextColor};
+      --tab-header-border: 4px;
+      --tab-btn-direction: row;
+      --tab-header-justify: flex-start;
+      --tab-padding: 0;
+      --tab-margin: 0;
+      --tab-br: 0;
+    }
+  }
+}

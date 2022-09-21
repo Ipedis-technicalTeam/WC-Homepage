@@ -2,14 +2,14 @@
 @use '../utilities' as *;
 
 header {
-  // background-color: $headerBackgroundColor;
-  // color: $headerTextColor;
+  background-color: $headerBackgroundColor;
+  color: $headerTextColor;
 
   .head {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     gap: rem(30);
-    margin-block-end: rem(50);
+    margin-block-end: rem(60);
 
     .logo-wrapper {
       inline-size: rem(250);
