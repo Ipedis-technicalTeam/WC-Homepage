@@ -13,6 +13,13 @@
 }
 
 @font-face {
+  font-family: 'OpenSans-SemiBold';
+  src: url('../fonts/OpenSans-SemiBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Nunito-Bold';
   src: url('../fonts/Nunito-Bold.woff') format('woff');
   font-weight: normal;
@@ -21,4 +28,5 @@
 
 $primaryFontRegular: 'OpenSans-Regular', sans-serif;
 $primaryFontBold: 'OpenSans-Bold', sans-serif;
+$primaryFontSemiBold: 'OpenSans-SemiBold', sans-serif;
 $secondaryFontBold: 'Nunito-Bold', sans-serif;

@@ -3,11 +3,11 @@
   <section>
     <div class="container">
       <ip-tab-panel
-        tab-panel-title="Slider style 1"
+        tab-panel-title="Slider style&nbsp;1"
         tab-panel-headers='[
-          {"title":"Preview", "imgPath": "assets/icons/google-plus.svg", "imgPathActive": "assets/icons/google-plus.svg"},
-          {"alt":"Code", "imgPath": "assets/icons/instagram.svg", "imgPathActive": "assets/icons/instagram.svg"},
-          {"alt":"Accessibility", "imgPath": "assets/icons/down.svg", "imgPathActive": "assets/icons/down.svg"}
+          {"title":"Preview", "imgPath": "assets/icons/preview-icon.svg", "imgPathActive": "assets/icons/preview-icon-white.svg"},
+          {"alt":"Code", "imgPath": "assets/icons/code.svg", "imgPathActive": "assets/icons/code-white.svg"},
+          {"alt":"Accessibility", "imgPath": "assets/icons/accessibility-icon.svg", "imgPathActive": "assets/icons/accessibility-icon-white.svg"}
         ]'
       >
         <div class="ip-content" slot="tab-content-1">
@@ -20,12 +20,12 @@
                 <h2 class="ip-content-title">Accessibilité</h2>
                 <h3 class="ip-content-subtitle">6 Bonnes Pratiques pour être en Conformité</h3>
                 <p class="ip-content-text">
-                  Aujourd’hui, encore beaucoup de sites Web et d’applications mobiles sont conçus
-                  sans penser à la navigation des personnes en situation de handicap. Pourtant, pour
-                  ces personnes, l’outil digital représente un véritable levier d’intégration, et
-                  leur apporte bien souvent un surcroît d’indépendance.Selon les différents types de
-                  handicaps, les manquements les plus couramment relevés sur le Web ne sont pas les
-                  mêmes.
+                  Aujourd&apos;hui, encore beaucoup de sites Web et d&apos;applications mobiles sont
+                  conçus sans penser à la navigation des personnes en situation de handicap.
+                  Pourtant, pour ces personnes, l&apos;outil digital représente un véritable levier
+                  d&apos;intégration, et leur apporte bien souvent un surcroît d&apos;indépendance.
+                  Selon les différents types de handicaps, les manquements les plus couramment
+                  relevés sur le Web ne sont pas les mêmes.
                 </p>
                 <button
                   class="ip-content-btn"
@@ -42,11 +42,34 @@
         <div class="ip-content" slot="tab-content-2">
           <ip-tab-panel
             tab-panel-headers='[{"title":"HTML"}, {"title": "CSS"}, {"title": "Javascript"}]'
-          ></ip-tab-panel>
+          >
+            <div class="ip-content" slot="tab-content-1">
+              <h4>Hello HTML</h4>
+            </div>
+
+            <div class="ip-content" slot="tab-content-2">
+              <h4>Hello CSS</h4>
+            </div>
+
+            <div class="ip-content" slot="tab-content-3">
+              <h4>Hello Javascript</h4>
+            </div>
+          </ip-tab-panel>
         </div>
 
         <div class="ip-content" slot="tab-content-3">
-          <h4>Hello World</h4>
+          <h4 class="header">Recommendation</h4>
+
+          <h5 class="title">Tab Container - div</h5>
+          <ul class="arrow-list">
+            <li>&nbsp;</li>
+            <li>
+              Add a label (aria&#8209;label or aria&#8209;labelledby to a title) to the tab
+              container describing its content.
+              <br />
+              &lt;div role="tablist" aria&#8209;label="description of content"&gt;
+            </li>
+          </ul>
         </div>
       </ip-tab-panel>
     </div>

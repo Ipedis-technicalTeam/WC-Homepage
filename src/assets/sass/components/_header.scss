@@ -7,9 +7,17 @@ header {
 
   .head {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: rem(30);
     margin-block-end: rem(60);
+
+    .separator {
+      block-size: rem(24);
+
+      &::before {
+        inset-block-start: em(-8);
+      }
+    }
 
     .logo-wrapper {
       inline-size: rem(250);

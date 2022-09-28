@@ -2,37 +2,43 @@
 @use '../utilities' as *;
 
 ip-tab-panel {
+  --tab-header-title-font: #{$primaryFontBold};
+  --tab-header-title: #{rem(24)};
+  --tab-panel-font: #{$primaryFontSemiBold};
   --tab-primary-color: #{$darkColor};
   --tab-active-text-color: #{$lightColor};
   --tab-panel-text-color: #{$tabTextColor};
   --tab-header-border: 0;
   --tab-btn-direction: row;
-  --tab-br: 0;
-  //   --tab-padding: #{rem(10)};
-  --gap: #{rem(18)};
-
+  --tab-header-padding: #{em(25) em(30)};
+  --tab-padding: #{em(10)};
+  --tab-margin: 0;
+  --tab-btn-gap: #{em(15)};
+  --tab-gap: #{em(12)};
+  --tab-br: #{em(4)};
   --tab-header-border-color: #{darken($tabBackgroundColor, 9)};
-  //   --tab-header-justify: flex-end;
+  --tab-icon-size: #{rem(25)};
 
   display: block;
   inline-size: 100%;
   block-size: rem(875);
   background-color: $tabBackgroundColor;
-  border-radius: rem(15);
+  border-radius: em(15);
   box-shadow: 0 0 rem(12) fade(darken($darkColor, 100), 25);
   overflow: hidden;
   box-sizing: border-box;
 
   > .ip-content {
+    font-family: $primaryFontRegular;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: darken($tabBackgroundColor, 3);
+    min-block-size: rem(875) - rem(48);
     block-size: auto;
-    max-block-size: rem(875) - rem(73);
     border-block-start: 2px solid darken($tabBackgroundColor, 9);
-    padding-block: rem(50);
-    padding-inline: rem(75);
+    padding-block: em(50);
+    padding-inline: em(75);
     box-sizing: border-box;
 
     ip-tab-panel {
@@ -43,8 +49,12 @@ ip-tab-panel {
       --tab-header-border: 1px;
       --tab-header-border-color: #{$secondaryColor};
       --tab-btn-direction: column;
-      --tab-br: #{rem(10) rem(10) 0 0};
-      --gap: #{rem(10)};
+      --tab-br: #{em(10) em(10) 0 0};
+      --tab-btn-gap: #{em(10)};
+      --tab-header-padding: 0;
+      --tab-padding: #{em(20)};
+      --tab-margin: #{0 em(12)};
+      --tab-icon-size: #{rem(32)};
 
       display: contents;
       inline-size: 100%;
@@ -61,63 +71,65 @@ ip-tab-panel {
       .ip-content {
         margin: 0 0;
         display: flex;
+        gap: rem(50);
+        padding-inline: 0;
+        align-items: center;
       }
 
       .ip-content img {
-        border-radius: 10px;
+        border-radius: rem(10);
       }
 
       .ip-content .ip-content-desc {
-        margin-left: 50px;
-        margin-right: 25px;
+        flex-basis: 50%;
       }
 
       .ip-content .ip-content-title {
-        margin-top: 35px;
-        font-family: Avenir-Heavy;
-        font-size: 18px;
+        margin-top: rem(35);
+        font-family: $primaryFontBold;
+        font-size: rem(18);
         color: var(--tab-primary-color);
         text-transform: uppercase;
       }
 
       .ip-content .ip-content-subtitle {
-        margin-top: 15px;
-        font-family: Avenir-Heavy;
-        font-size: 42px;
+        margin-top: rem(15);
+        font-family: $secondaryFontBold;
+        font-size: rem(40);
         color: var(--tab-primary-color);
       }
 
       .ip-content .ip-content-text {
-        margin-top: 20px;
-        font-family: Avenir-Book;
-        font-size: 18px;
-        color: #2e3243;
+        margin-top: rem(20);
+        font-family: $primaryFontRegular;
+        font-size: rem(18);
+        color: $tabTextColor;
       }
 
       .ip-content .ip-content-btn {
-        margin-top: 20px;
-        font-family: Avenir-Heavy;
-        font-size: 16px;
+        margin-top: rem(20);
+        font-family: $primaryFontBold;
+        font-size: rem(16);
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        padding: 10px 16px;
+        padding: em(10) em(16);
         border: none;
-        border-radius: 4px;
-        background-color: var(--tab-primary-color);
-        color: #ffffff;
+        border-radius: em(4);
+        background-color: $secondaryColor;
+        color: contrast($secondaryColor, $lightColor, $darkColor);
         cursor: pointer;
+        transition: background-color $transition-in-out;
+
+        &:hover {
+          background-color: darken($secondaryColor, 10%);
+        }
       }
 
       .ip-content .ip-content-btn img {
-        margin-left: 15px;
-        width: 14px;
-        height: 15px;
-      }
-
-      .tab-panel {
-        max-width: 1080px;
-        margin: 100px auto;
+        margin-left: rem(15);
+        width: rem(14);
+        height: rem(15);
       }
     }
   }
@@ -125,14 +137,75 @@ ip-tab-panel {
   [slot='tab-content-2'] {
     ip-tab-panel {
       --tab-primary-color: #{$tabBackgroundColor};
-      --tab-active-text-color: #{$tabTextColor};
+      --tab-active-text-color: #{$primaryColor};
       --tab-panel-text-color: #{$tabTextColor};
-      --tab-header-border: 4px;
+      --tab-header-border: #{rem(18)};
       --tab-btn-direction: row;
       --tab-header-justify: flex-start;
       --tab-padding: 0;
       --tab-margin: 0;
       --tab-br: 0;
+      --tab-gap: #{rem(50)};
+      --tab-font-size: #{rem(28)};
+
+      display: block;
+      flex-basis: 100%;
+      inline-size: 100%;
+
+      .ip-content {
+        border-block-start: rem(4) solid darken($tabBackgroundColor, 9);
+        display: block;
+        padding-inline: 0;
+      }
+    }
+  }
+
+  [slot='tab-content-3'] {
+    display: block;
+
+    .header {
+      font-family: $primaryFontRegular;
+      font-size: rem(38);
+      margin-block-end: rem(50);
+    }
+
+    .title {
+      font-family: $primaryFontBold;
+      font-size: rem(20);
+      color: $primaryColor;
+      margin-block-end: rem(30);
+    }
+
+    .arrow-list {
+      list-style-type: none;
+      padding-inline-start: rem(20);
+      margin-block-end: rem(30);
+
+      li {
+        position: relative;
+        padding-inline-start: em(30);
+        color: darken($tabBackgroundColor, 61);
+        margin-block-end: rem(30);
+
+        &:last-child {
+          margin-block-end: 0;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          inset-block-start: em(5);
+          inset-inline-start: 0;
+          inline-size: em(15);
+          aspect-ratio: 1/1;
+          background-image: url('../icons/arrow-right.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 200%;
+          color: $primaryColor;
+          fill: currentColor;
+        }
+      }
     }
   }
 }

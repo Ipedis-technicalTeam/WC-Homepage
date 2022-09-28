@@ -19,7 +19,7 @@
 
 .separator {
   position: relative;
-  block-size: em(25);
+  block-size: 100%;
 
   &::before {
     content: '';
