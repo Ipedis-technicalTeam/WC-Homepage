@@ -6,7 +6,7 @@ const EN = require('./src/locales/en.json');
 
 module.exports = merge(prod, {
   output: {
-    path: path.resolve(__dirname, 'dist/EN'),
+    path: path.resolve(__dirname, 'docs'),
   },
 
   plugins: [
