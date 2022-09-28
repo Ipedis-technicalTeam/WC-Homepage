@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Bank</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LP-Component-/-Tablet-768px-/-Tab-Panel" transform="translate(-652.000000, -55.000000)">
+            <g id="Group-5" transform="translate(623.000000, 55.000000)">
+                <g id="Bank" transform="translate(29.000000, 0.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                    <polygon id="Path" stroke="#B00057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="3.00025 12 29.00025 12 16.00025 4"></polygon>
+                    <line x1="7.000305" y1="12" x2="7.000305" y2="22" id="Path" stroke="#B00057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="13.000305" y1="12" x2="13.000305" y2="22" id="Path" stroke="#B00057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="19.000305" y1="12" x2="19.000305" y2="22" id="Path" stroke="#B00057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="25.000305" y1="12" x2="25.000305" y2="22" id="Path" stroke="#B00057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="4.000305" y1="22" x2="28.000305" y2="22" id="Path" stroke="#B00057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="2.000305" y1="26" x2="30.000305" y2="26" id="Path" stroke="#B00057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

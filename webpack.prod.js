@@ -63,6 +63,12 @@ module.exports = merge(common, {
           to: './assets/files/[name][ext]',
         },
 
+        // Icons
+        {
+          from: path.resolve(__dirname, './src/assets/icons'),
+          to: './assets/icons/[name][ext]',
+        },
+
         // Images
         {
           from: path.resolve(__dirname, './src/assets/images'),
