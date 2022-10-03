@@ -18,7 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "@andreasremdt/simple-translator": "^2.0.4",
-    "ip-components": "^0.0.8",
+    "ip-components": "^0.0.9",
     "sass": "^1.54.4"
   },
   "devDependencies": {

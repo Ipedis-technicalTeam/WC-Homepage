@@ -3,6 +3,7 @@
   <section>
     <div class="container">
       <ip-tab-panel
+        class="main-tab-panel"
         tab-panel-title="Slider style&nbsp;1"
         tab-panel-headers='[
           {"title":"Preview", "imgPath": "assets/icons/preview-icon.svg", "imgPathActive": "assets/icons/preview-icon-white.svg"},
@@ -12,6 +13,7 @@
       >
         <div class="ip-content" slot="tab-content-1">
           <ip-tab-panel
+            class="demo-tab-panel"
             tab-panel-headers='[{"title":"Accessibilité", "imgPath": "assets/icons/acc-1.svg", "imgPathActive": "assets/icons/acc-1-active.svg"}]'
           >
             <div class="ip-content" slot="tab-content-1">
@@ -41,6 +43,7 @@
 
         <div class="ip-content" slot="tab-content-2">
           <ip-tab-panel
+            class="code-tab-panel"
             tab-panel-headers='[{"title":"HTML"}, {"title": "CSS"}, {"title": "Javascript"}]'
           >
             <div class="ip-content" slot="tab-content-1">
@@ -58,18 +61,100 @@
         </div>
 
         <div class="ip-content" slot="tab-content-3">
-          <h4 class="header">Recommendation</h4>
+          <div>
+            <h4 class="header">Recommendation</h4>
 
-          <h5 class="title">Tab Container - div</h5>
-          <ul class="arrow-list">
-            <li>&nbsp;</li>
-            <li>
-              Add a label (aria&#8209;label or aria&#8209;labelledby to a title) to the tab
-              container describing its content.
-              <br />
-              &lt;div role="tablist" aria&#8209;label="description of content"&gt;
-            </li>
-          </ul>
+            <h5 class="title">Tab&nbsp;Container &#8209; div</h5>
+            <ul class="arrow-list">
+              <li>
+                Add role="tablist" on div to indicate that the element serves as a container for a
+                set of tabs.
+              </li>
+
+              <li>
+                Add a label (aria&#8209;label or aria&#8209;labelledby linked to a title) to the tab
+                container describing its content.
+                <br />
+                &lt;div role="tabpanel" aria&#8209;label="description of content"&gt;
+              </li>
+            </ul>
+
+            <h5 class="title">Panel</h5>
+            <ul class="arrow-list">
+              <li>
+                Add role="tabpanel" on div containing tab contents to indicates the element serves
+                as a container for tab&nbsp;panel content.
+              </li>
+
+              <li>Add a unique identifier (id) to each panel.</li>
+
+              <li>
+                Add an aria&#8209;labelledby to each tab button and linked it to the id of
+                corresponding button.
+                <br />
+                &lt;div id="tabpanel&#8209;1" role="tabpanel"
+                aria&#8209;labelledby="tab&#8209;1"&gt;
+              </li>
+            </ul>
+
+            <h5 class="title">Tab&nbsp;buttons</h5>
+            <ul class="arrow-list">
+              <li>Use &lt;button&gt; tag to define each button of the tab panel list.</li>
+
+              <li>Add role="tab" to each button.</li>
+
+              <li>Add a unique identifier (id) to each button.</li>
+
+              <li>
+                Add aria&#8209;controls to each button with corresponding panel id.
+                <br />
+                &lt;button id="tab&#8209;1" type="button" role="tab" aria&#8209;selected="true"
+                aria&#8209;controls="tabpanel&#8209;1"&gt;
+              </li>
+            </ul>
+
+            <h5 class="title">If panel is activated:</h5>
+            <ul class="arrow-list">
+              <li>
+                Add aria&#8209;selected="true" to button of active panel to indicates the tab is
+                selected and its associated tabpanel is displayed.
+              </li>
+
+              <li>
+                Add tabindex="0" to div containing panel contents of activated panel to add it to
+                tab order.
+                <br />
+                &lt;div id="tabpanel&#8209;1" role="tabpanel" tabindex="0"
+                aria&#8209;labelledby="tab&#8209;1"&gt;
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="title">If panel is not activated</h5>
+            <ul class="arrow-list">
+              <li>
+                Add aria&#8209;selected="false" to button to indicates the tab is not selected and
+                its associated tabpanel is NOT&nbsp;displayed.
+              </li>
+
+              <li>
+                Add tabindex="&#8209;1" to all unactive buttons to remove them from tab order.
+                <br />
+                &lt;button id="tab&#8209;2" type="button" role="tab" aria&#8209;selected="false"
+                aria&#8209;controls="tabpanel&#8209;2" tabindex="&#8209;1"&gt;
+              </li>
+            </ul>
+
+            <h4 class="header">Keyboard&nbsp;Support</h4>
+
+            <h5 class="title">Tab</h5>
+            <p>When focus moves into the tab list, places focus on the active tab element.</p>
+            <p>
+              When the tab list contains the focus, moves focus to the next element in the tab
+              sequence, which is the tabpanel element
+            </p>
+          </div>
         </div>
       </ip-tab-panel>
     </div>

@@ -2,26 +2,9 @@
 @use '../utilities' as *;
 
 ip-tab-panel {
-  --tab-header-title-font: #{$primaryFontBold};
-  --tab-header-title: #{rem(24)};
-  --tab-panel-font: #{$primaryFontSemiBold};
-  --tab-primary-color: #{$darkColor};
-  --tab-active-text-color: #{$lightColor};
-  --tab-panel-text-color: #{$tabTextColor};
-  --tab-header-border: 0;
-  --tab-btn-direction: row;
-  --tab-header-padding: #{em(25) em(30)};
-  --tab-padding: #{em(10)};
-  --tab-margin: 0;
-  --tab-btn-gap: #{em(15)};
-  --tab-gap: #{em(12)};
-  --tab-br: #{em(4)};
-  --tab-header-border-color: #{darken($tabBackgroundColor, 9)};
-  --tab-icon-size: #{rem(25)};
-
   display: block;
   inline-size: 100%;
-  block-size: rem(875);
+  // block-size: rem(875);
   background-color: $tabBackgroundColor;
   border-radius: em(15);
   box-shadow: 0 0 rem(12) fade(darken($darkColor, 100), 25);
@@ -34,28 +17,12 @@ ip-tab-panel {
     align-items: center;
     justify-content: center;
     background-color: darken($tabBackgroundColor, 3);
-    min-block-size: rem(875) - rem(48);
-    block-size: auto;
+
     border-block-start: 2px solid darken($tabBackgroundColor, 9);
-    padding-block: em(50);
-    padding-inline: em(75);
+
     box-sizing: border-box;
 
     ip-tab-panel {
-      --tab-primary-color: #{$secondaryColor};
-      --tab-active-text-color: #{contrast($secondaryColor, $lightColor, $darkColor)};
-      --tab-panel-text-color: #{$darkColor};
-      --tab-header-justify: center;
-      --tab-header-border: 1px;
-      --tab-header-border-color: #{$secondaryColor};
-      --tab-btn-direction: column;
-      --tab-br: #{em(10) em(10) 0 0};
-      --tab-btn-gap: #{em(10)};
-      --tab-header-padding: 0;
-      --tab-padding: #{em(20)};
-      --tab-margin: #{0 em(12)};
-      --tab-icon-size: #{rem(32)};
-
       display: contents;
       inline-size: 100%;
       block-size: 100%;
@@ -65,146 +32,176 @@ ip-tab-panel {
       overflow: visible;
     }
   }
+}
 
-  [slot='tab-content-1'] {
-    ip-tab-panel {
-      .ip-content {
-        margin: 0 0;
-        display: flex;
-        gap: rem(50);
-        padding-inline: 0;
-        align-items: center;
-      }
+.main-tab-panel {
+  &::part(tab-container) {
+    padding-inline: em(30);
+    padding-block: em(25);
+    border-block-end: 2px solid darken($lightColor, 9);
+  }
 
-      .ip-content img {
-        border-radius: rem(10);
-      }
+  &::part(tab-panel-title) {
+    font-size: rem(24);
+  }
 
-      .ip-content .ip-content-desc {
-        flex-basis: 50%;
-      }
+  &::part(tab-btn-list) {
+    gap: rem(12);
+  }
 
-      .ip-content .ip-content-title {
-        margin-top: rem(35);
-        font-family: $primaryFontBold;
-        font-size: rem(18);
-        color: var(--tab-primary-color);
-        text-transform: uppercase;
-      }
+  &::part(tab-btn) {
+    flex-direction: row;
+    gap: 1em;
+    color: $tabTextColor;
+    border: 2px solid darken($lightColor, 9);
+    border-radius: em(4);
+    padding: em(10);
+  }
 
-      .ip-content .ip-content-subtitle {
-        margin-top: rem(15);
-        font-family: $secondaryFontBold;
-        font-size: rem(40);
-        color: var(--tab-primary-color);
-      }
+  &::part(tab-icon) {
+    inline-size: rem(25);
+    block-size: rem(25);
+  }
 
-      .ip-content .ip-content-text {
-        margin-top: rem(20);
-        font-family: $primaryFontRegular;
-        font-size: rem(18);
-        color: $tabTextColor;
-      }
+  &::part(tab-text):empty {
+    display: none;
+  }
 
-      .ip-content .ip-content-btn {
-        margin-top: rem(20);
-        font-family: $primaryFontBold;
-        font-size: rem(16);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: em(10) em(16);
-        border: none;
-        border-radius: em(4);
-        background-color: $secondaryColor;
-        color: contrast($secondaryColor, $lightColor, $darkColor);
-        cursor: pointer;
-        transition: background-color $transition-in-out;
+  &::part(tab-btn-active) {
+    border-color: $darkColor;
+    background-color: $darkColor;
+    color: $lightColor;
+  }
 
-        &:hover {
-          background-color: darken($secondaryColor, 10%);
-        }
-      }
+  > .ip-content {
+    padding: em(50);
+    block-size: rem(775);
+    overflow-y: scroll;
+  }
+}
 
-      .ip-content .ip-content-btn img {
-        margin-left: rem(15);
-        width: rem(14);
-        height: rem(15);
-      }
+.ip-content:has(.demo-tab-panel) {
+  overflow-y: visible;
+}
+
+.demo-tab-panel {
+  &::part(tab-container) {
+    justify-content: center;
+  }
+
+  .ip-content {
+    align-items: center;
+    padding-block-start: em(50);
+    gap: rem(30);
+  }
+}
+
+.ip-content:has(.code-tab-panel) {
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.code-tab-panel {
+  &::part(tab-container) {
+    justify-content: flex-start;
+    padding-block-end: rem(18);
+    border-block-end: rem(4) solid darken($lightColor, 9);
+  }
+
+  &::part(tab-btn-list) {
+    gap: rem(50);
+  }
+
+  &::part(tab-btn) {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    font-family: $primaryFontRegular;
+    font-size: rem(28);
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset-block-end: rem(-23);
+      inset-inline: 0;
+      block-size: rem(4);
+      inline-size: 0;
+      background-color: $primaryColor;
+      transition: all 0.3s ease-in-out;
     }
   }
 
-  [slot='tab-content-2'] {
-    ip-tab-panel {
-      --tab-primary-color: #{$tabBackgroundColor};
-      --tab-active-text-color: #{$primaryColor};
-      --tab-panel-text-color: #{$tabTextColor};
-      --tab-header-border: #{rem(18)};
-      --tab-btn-direction: row;
-      --tab-header-justify: flex-start;
-      --tab-padding: 0;
-      --tab-margin: 0;
-      --tab-br: 0;
-      --tab-gap: #{rem(50)};
-      --tab-font-size: #{rem(28)};
+  &::part(tab-btn-active) {
+    background-color: transparent;
+    color: $primaryColor;
 
-      display: block;
-      flex-basis: 100%;
+    &::before {
       inline-size: 100%;
-
-      .ip-content {
-        border-block-start: rem(4) solid darken($tabBackgroundColor, 9);
-        display: block;
-        padding-inline: 0;
-      }
     }
   }
 
-  [slot='tab-content-3'] {
+  .ip-content {
     display: block;
+    padding-block-start: em(50);
+  }
+}
 
-    .header {
-      font-family: $primaryFontRegular;
-      font-size: rem(38);
-      margin-block-end: rem(50);
+[slot='tab-content-3'] {
+  flex-direction: column;
+  align-items: unset !important;
+  justify-content: unset !important;
+
+  .header {
+    font-family: $primaryFontRegular;
+    font-size: rem(38);
+    margin-block-end: rem(50);
+  }
+
+  .title {
+    font-family: $primaryFontBold;
+    font-size: rem(20);
+    color: $primaryColor;
+    margin-block-end: rem(30);
+  }
+
+  p {
+    margin-block-end: em(10);
+
+    &:last-child {
+      margin-block-end: 0;
     }
+  }
 
-    .title {
-      font-family: $primaryFontBold;
-      font-size: rem(20);
-      color: $primaryColor;
+  .arrow-list {
+    list-style-type: none;
+    padding-inline-start: rem(20);
+    margin-block-end: rem(30);
+
+    li {
+      position: relative;
+      padding-inline-start: em(30);
+      color: darken($tabBackgroundColor, 61);
       margin-block-end: rem(30);
-    }
 
-    .arrow-list {
-      list-style-type: none;
-      padding-inline-start: rem(20);
-      margin-block-end: rem(30);
+      &:last-child {
+        margin-block-end: 0;
+      }
 
-      li {
-        position: relative;
-        padding-inline-start: em(30);
-        color: darken($tabBackgroundColor, 61);
-        margin-block-end: rem(30);
-
-        &:last-child {
-          margin-block-end: 0;
-        }
-
-        &::before {
-          content: '';
-          position: absolute;
-          inset-block-start: em(5);
-          inset-inline-start: 0;
-          inline-size: em(15);
-          aspect-ratio: 1/1;
-          background-image: url('../icons/arrow-right.svg');
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: 200%;
-          color: $primaryColor;
-          fill: currentColor;
-        }
+      &::before {
+        content: '';
+        position: absolute;
+        inset-block-start: em(5);
+        inset-inline-start: 0;
+        inline-size: em(15);
+        aspect-ratio: 1/1;
+        background-image: url('../icons/arrow-right.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 200%;
+        color: $primaryColor;
+        fill: currentColor;
       }
     }
   }
