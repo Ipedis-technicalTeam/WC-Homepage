@@ -8,19 +8,26 @@
         tab-panel-headers='[
           {"title":"Preview", "imgPath": "assets/icons/preview-icon.svg", "imgPathActive": "assets/icons/preview-icon-white.svg"},
           {"alt":"Code", "imgPath": "assets/icons/code.svg", "imgPathActive": "assets/icons/code-white.svg"},
-          {"alt":"Accessibility", "imgPath": "assets/icons/accessibility-icon.svg", "imgPathActive": "assets/icons/accessibility-icon-white.svg"}
+          {"alt":"Accessibility", "imgPath": "assets/icons/accessibility-icon.svg", "imgPathActive": "assets/icons/accessibility-icon-white.svg"},
+          {"alt":"Documentation", "imgPath": "assets/icons/document.svg", "imgPathActive": "assets/icons/document-white.svg"}
         ]'
       >
         <div class="ip-content" slot="tab-content-1">
           <ip-tab-panel
             class="demo-tab-panel"
-            tab-panel-headers='[{"title":"Accessibilité", "imgPath": "assets/icons/acc-1.svg", "imgPathActive": "assets/icons/acc-1-active.svg"}]'
+            tab-panel-headers='[
+              {"title":"Accessibilité", "imgPath": "assets/icons/acc-1.svg", "imgPathActive": "assets/icons/acc-1-active.svg"},
+              {"title":"Pdf Document", "imgPath":"assets/icons/acc-2.svg", "imgPathActive": "assets/icons/acc-2-active.svg"},
+              {"title":"Statistical", "imgPath":"assets/icons/acc-3.svg", "imgPathActive": "assets/icons/acc-3-active.svg"},
+              {"title":"Certification", "imgPath":"assets/icons/acc-4.svg", "imgPathActive": "assets/icons/acc-4-active.svg"},
+              {"title":"Legislation", "imgPath":"assets/icons/acc-5.svg", "imgPathActive": "assets/icons/acc-5-active.svg"}
+            ]'
           >
             <div class="ip-content" slot="tab-content-1">
               <img src="assets/images/tab-img-1.png" alt="" />
               <div class="ip-content-desc">
                 <h2 class="ip-content-title">Accessibilité</h2>
-                <h3 class="ip-content-subtitle">6 Bonnes Pratiques pour être en Conformité</h3>
+                <h3 class="ip-content-subtitle">6&nbsp;Bonnes Pratiques pour être en Conformité</h3>
                 <p class="ip-content-text">
                   Aujourd&apos;hui, encore beaucoup de sites Web et d&apos;applications mobiles sont
                   conçus sans penser à la navigation des personnes en situation de handicap.
@@ -33,6 +40,88 @@
                   class="ip-content-btn"
                   aria-label="En savoir plus, 6 Bonnes Pratiques pour être en Conformité"
                 >
+                  En savoir plus
+                  <img src="assets/icons/right.svg" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="ip-content" slot="tab-content-2">
+              <img src="assets/images/tab-img-2.png" alt="" />
+              <div class="ip-content-desc">
+                <h2 class="ip-content-title">DOCUMENT&nbsp;PDF</h2>
+                <h3 class="ip-content-subtitle">Comment ont été conçus les PDF&nbsp;?</h3>
+                <p class="ip-content-text">
+                  À l&apos;origine, les documents PDF n&apos;étaient pas conçus pour être lus via un
+                  ordinateur mais pour être imprimés. Aujourd&apos;hui, les documents PDF sont de
+                  plus en plus utilisés par les entreprises pour échanger et diffuser de
+                  l&apos;information numérique de façon plus professionnelle (présentation, sécurité
+                  pour la protection de données). Sans&nbsp;traitement, les documents PDF sont
+                  inaccessibles pour des personnes non-voyantes utilisant des outils tels qu&apos;un
+                  lecteur d&apos;écran.
+                </p>
+                <button class="ip-content-btn">
+                  En savoir plus
+                  <img src="assets/icons/right.svg" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="ip-content" slot="tab-content-3">
+              <img src="assets/images/tab-img-3.png" alt="" />
+              <div class="ip-content-desc">
+                <h2 class="ip-content-title">Statistical</h2>
+                <h3 class="ip-content-subtitle">Gérer efficacement la&nbsp;création</h3>
+                <p class="ip-content-text">
+                  PubliSpeak a été pensé pour vous faciliter la gestion de vos publications. Toutes
+                  les informations relatives à votre publication sont consultables en un clin d'œil.
+                  Titre, clients, nombre de pages, langues, dates et statuts. Les&nbsp;statuts font
+                  intégralement partie du cycle de vie d&apos;une publication et de votre gestion de
+                  projet. Rendre visible son travail pour le faire valider par ses collaborateurs ou
+                  ses clients n&apos;est pas de tout repos.
+                </p>
+                <button class="ip-content-btn">
+                  En savoir plus
+                  <img src="assets/icons/right.svg" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="ip-content" slot="tab-content-4">
+              <img src="assets/images/tab-img-4.jpeg" alt="" />
+              <div class="ip-content-desc">
+                <h2 class="ip-content-title">Certification</h2>
+                <h3 class="ip-content-subtitle">Nos équipes vous accompagnent</h3>
+                <p class="ip-content-text">
+                  Notre plateforme de publications digitales répond à vos besoins mais vous
+                  n&apos;êtes pas à l'aise avec l&apos;accessibilité numérique .Pas de panique,
+                  onboarding, formation et support, nos équipes vous accompagnent vers
+                  l&apos;autonomie et la prise en main de l&apos;accessibilité numérique.Associez
+                  vos publications entre elles et construisez un corpus de documents afin de
+                  permettre à votre lecteur de naviguer facilement entre vos différentes
+                  publications.
+                </p>
+                <button class="ip-content-btn">
+                  En savoir plus
+                  <img src="assets/icons/right.svg" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="ip-content" slot="tab-content-5">
+              <img src="assets/images/tab-img-5.jpg" alt="" />
+              <div class="ip-content-desc">
+                <h2 class="ip-content-title">Legislation</h2>
+                <h3 class="ip-content-subtitle">Valider votre travail auprès de vos clients</h3>
+                <p class="ip-content-text">
+                  PubliSpeak est un SaaS prêt à l’emploi. Il permet de charger votre fichier PDF
+                  initial final en un clic et de personnaliser la publication selon vos envies.
+                  L’éditeur est un formidable moteur de création pour la vue article. Et plus les
+                  lecteurs restent, plus ils sont convaincus ! Si le temps vous manque, des
+                  “inspirations” sont prêtes à l’emploi ! Néanmoins, si vous préférez déléguer la
+                  partie édition, notre studio dédié s’en chargera.
+                </p>
+                <button class="ip-content-btn">
                   En savoir plus
                   <img src="assets/icons/right.svg" alt="" />
                 </button>
@@ -60,7 +149,7 @@
           </ip-tab-panel>
         </div>
 
-        <div class="ip-content" slot="tab-content-3">
+        <div class="ip-content accessibility-panel" slot="tab-content-3">
           <div>
             <h4 class="header">Recommendation</h4>
 
@@ -145,16 +234,63 @@
                 aria&#8209;controls="tabpanel&#8209;2" tabindex="&#8209;1"&gt;
               </li>
             </ul>
+          </div>
 
+          <div>
             <h4 class="header">Keyboard&nbsp;Support</h4>
 
             <h5 class="title">Tab</h5>
-            <p>When focus moves into the tab list, places focus on the active tab element.</p>
-            <p>
-              When the tab list contains the focus, moves focus to the next element in the tab
-              sequence, which is the tabpanel element
-            </p>
+
+            <ul class="arrow-list">
+              <li>When focus moves into the tab list, places focus on the active tab element.</li>
+
+              <li>
+                When the tab list contains the focus, moves focus to the next element in the tab
+                sequence, which is the tabpanel element.
+              </li>
+            </ul>
+
+            <h5 class="title">Right&nbsp;Arrow</h5>
+
+            <ul class="arrow-list">
+              <li>Moves focus to the next tab.</li>
+
+              <li>If focus is on the last tab, moves focus to the first tab.</li>
+
+              <li>Activates the newly focused tab.</li>
+            </ul>
+
+            <h5 class="title">Left&nbsp;Arrow</h5>
+
+            <ul class="arrow-list">
+              <li>Moves focus to the previous tab.</li>
+
+              <li>If focus is on the first tab, moves focus to the last tab.</li>
+
+              <li>Activates the newly focused tab.</li>
+            </ul>
+
+            <h5 class="title">Home</h5>
+            <ul class="arrow-list">
+              <li>Moves focus to the first tab and activates it.</li>
+            </ul>
+
+            <h5 class="title">End</h5>
+            <ul class="arrow-list">
+              <li>Moves focus to the last tab and activates it.</li>
+            </ul>
           </div>
+
+          <p class="guidelines-link">
+            Complete W3C guidelines:
+            <a
+              href="https://w3c.github.io/aria-practices/examples/tabs/tabs-automatic.html"
+              target="_blank"
+              rel="noopener"
+            >
+              https://w3c.github.io/aria&#8209;practices/examples/tabs/tabs&#8209;automatic.html
+            </a>
+          </p>
         </div>
       </ip-tab-panel>
     </div>

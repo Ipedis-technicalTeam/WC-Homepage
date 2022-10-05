@@ -48,6 +48,13 @@ h3 {
   @include mq($ps-mobile) {
     font-size: rem(20);
   }
+
+  .card & {
+    flex-basis: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
 
 p {

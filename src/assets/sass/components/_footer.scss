@@ -4,6 +4,8 @@
 footer {
   background-color: $footerBackgroundColor;
   color: $footerTextColor;
+  block-size: fit-content;
+  align-self: end;
 
   .container {
     display: flex;

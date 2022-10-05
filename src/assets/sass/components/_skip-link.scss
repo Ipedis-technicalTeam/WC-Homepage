@@ -2,12 +2,16 @@
 @use '../utilities' as *;
 
 #skip-links {
+  transform: translateY(-100vh);
   background-color: $bodyTextColor;
   color: contrast($bodyTextColor, $lightColor, $darkColor);
+  align-items: start;
   z-index: 99999;
 
   &:focus-within {
     padding: $containerPadding;
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
   }
 }
 
