@@ -1,0 +1,115 @@
+@use 'sass:math';
+@use '../../theme' as *;
+@use '../../utilities' as *;
+
+.blockquote-3 {
+  --primary-color: #{$primaryColor};
+  --secondary-color: #{contrast($primaryColor, $lightColor, $darkColor)};
+  --spacing: #{rem(50)};
+  --padding: #{rem(20)};
+  --primary-font: #{$primaryFontRegular};
+  --quote-font: #{$secondaryFontBold};
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: var(--spacing);
+  isolation: isolate;
+  color: var(--secondary-color);
+  gap: var(--spacing);
+  font: {
+    size: rem(18);
+    family: var(--primary-font);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    inset-block: rem(30);
+    background-color: var(--primary-color);
+    z-index: -1;
+  }
+
+  @include mq($ps-mobile-portrait) {
+    flex-direction: column;
+    gap: rem(10);
+
+    &::before {
+      inset-block-start: var(--spacing);
+      inset-block-end: 0;
+    }
+  }
+
+  &__avatar {
+    flex-basis: 40%;
+    object-fit: cover;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+
+    @include mq($ps-mobile-portrait) {
+      aspect-ratio: 1/1;
+      flex-basis: 50%;
+    }
+  }
+
+  .quote {
+    padding-block: calc(var(--spacing) - var(--padding));
+    flex-basis: 60%;
+
+    &__text {
+      position: relative;
+      color: var(--secondary-color);
+      quotes: initial;
+      margin: {
+        block-start: 2em;
+        block-end: 1em;
+      }
+      font: {
+        family: var(--quote-font);
+        size: 1.65em;
+        weight: normal;
+      }
+
+      &::before {
+        content: open-quote;
+        position: absolute;
+        inset-block-start: em(-15);
+        inset-inline-start: 0;
+        font-size: 3em;
+        color: currentColor;
+        pointer-events: none;
+      }
+
+      @include mq($ps-mobile) {
+        font-size: 1.2em;
+      }
+    }
+
+    &__caption {
+      text-transform: capitalize;
+      font: {
+        family: inherit;
+        size: 1em;
+        weight: bold;
+      }
+
+      @include mq($ps-mobile) {
+        font-size: 1em;
+      }
+
+      &__cite {
+        text-transform: none;
+        display: block;
+        opacity: 0.8;
+
+        font: {
+          size: 0.8em;
+          weight: normal;
+          style: normal;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<title>ShieldCheck</title>
+<g id="Page-1">
+	<g transform="translate(-518.000000, -55.000000)">
+		<g id="Group-8" transform="translate(463.000000, 35.000000)">
+			<g id="Group-4" transform="translate(20.000000, 20.000000)">
+				<g id="ShieldCheck" transform="translate(35.000000, 0.000000)">
+					<rect id="Rectangle" y="0" class="st0" width="32" height="32"/>
+					<path id="Path" class="st1" d="M5,14.3V7c0-0.6,0.4-1,1-1h20c0.6,0,1,0.4,1,1v7.3c0,10.5-8.9,14-10.7,14.6
+						c-0.2,0.1-0.4,0.1-0.6,0C13.9,28.3,5,24.8,5,14.3z"/>
+					<polyline class="st1" points="21.5,13 14.2,20 10.5,16.5 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

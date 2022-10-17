@@ -1,0 +1,186 @@
+<!-- MAIN START -->
+<main>
+  <section>
+    <div class="container">
+      <ip-tab-panel
+        class="main-tab-panel"
+        tab-panel-title="Slider style&nbsp;1"
+        tab-panel-headers='[
+          {"title":"Preview", "imgPath": "assets/icons/preview-icon.svg", "imgPathActive": "assets/icons/preview-icon-white.svg"},
+          {"alt":"Code", "imgPath": "assets/icons/code.svg", "imgPathActive": "assets/icons/code-white.svg"}
+          
+        ]'
+      >
+        <div class="ip-content preview" slot="tab-content-1">
+          <div class="blockquote-3">
+            <img
+              class="blockquote-3__avatar"
+              src="https://themes.muffingroup.com/be/biker4/wp-content/uploads/2022/07/biker4-about-pic1.webp"
+              alt="Photo of John Yellow"
+            />
+
+            <figure class="quote">
+              <blockquote class="quote__text">
+                Nullam consequat volutpat donec urna lorem pellentesque. Pharetra velit pellentesque
+                augue.
+              </blockquote>
+
+              <figcaption class="quote__caption">
+                John&nbsp;Yellow <cite class="quote__caption__cite">Sales&nbsp;manager</cite>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="ip-content" slot="tab-content-2">
+          <ip-tab-panel
+            class="code-tab-panel"
+            tab-panel-headers='[{"title":"HTML"}, {"title": "CSS"}]'
+          >
+            <div class="ip-content" slot="tab-content-1">
+              <pre>
+                <code>
+  &lt;div <span class="class">class="blockquote"</span>&gt;
+    &lt;img
+      <span class="class">class="blockquote__avatar"</span>
+      src="yourimage.jpg"
+      alt=""
+    /&gt;
+
+    &lt;figure <span class="class">class="quote"</span>&gt;
+      &lt;blockquote <span class="class">class="quote__text"</span>&gt;
+        Nullam consequat volutpat donec urna lorem pellentesque. Pharetra velit pellentesque
+        augue.
+      &lt;/blockquote&gt;
+
+      &lt;figcaption <span class="class">class="quote__caption"</span>&gt;
+        John Yellow
+        &lt;cite <span class="class">class="quote__caption__cite"</span>&gt;Sales manager&lt;/cite&gt;
+      &lt;/figcaption&gt;
+    &lt;/figure&gt;
+  &lt;/div&gt;
+                </code>
+              </pre>
+            </div>
+
+            <div class="ip-content" slot="tab-content-2">
+              <pre>
+                <code>
+  <span class="class">.blockquote</span> {
+    --primary-color: #0f8570;
+    --secondary-color: #ffffff;
+    --spacing: 3.125rem;
+    --padding: 1.25rem;
+    --primary-font: OpenSans-Regular, sans-serif;
+    --quote-font: Nunito-Bold, sans-serif;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: var(--spacing);
+    isolation: isolate;
+    color: var(--secondary-color);
+    gap: var(--spacing);
+    font-size: 1.125rem;
+    font-family: var(--primary-font);
+  }
+
+  <span class="class">.blockquote::before</span> {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    inset-block: 1.875rem;
+    background-color: var(--primary-color);
+    z-index: -1;
+  }
+
+  @media only screen and (max-width: 767px) and (orientation: portrait) {
+    <span class="class">.blockquote</span> {
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    <span class="class">.blockquote::before</span> {
+      inset-block-start: var(--spacing);
+      inset-block-end: 0;
+    }
+  }
+
+  <span class="class">.blockquote__avatar</span> {
+    flex-basis: 40%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+  }
+
+  @media only screen and (max-width: 767px) and (orientation: portrait) {
+    <span class="class">.blockquote__avatar</span> {
+      aspect-ratio: 1/1;
+      flex-basis: 50%;
+    }
+  }
+
+  <span class="class">.blockquote .quote</span> {
+    padding-block: calc(var(--spacing) - var(--padding));
+    flex-basis: 60%;
+  }
+
+  <span class="class">.blockquote .quote__text</span> {
+    position: relative;
+    color: var(--secondary-color);
+    -webkit-margin-after: 1em;
+    margin-block-end: 1em;
+    quotes: initial;
+    font-family: var(--quote-font);
+    font-size: 1.65em;
+    font-weight: normal;
+  }
+
+  <span class="class">.blockquote .quote__text::before</span> {
+    content: open-quote;
+    position: absolute;
+    inset-block-start: -0.9375em;
+    inset-inline-start: 0;
+    font-size: 3em;
+    color: currentColor;
+    pointer-events: none;
+  }
+
+  @media only screen and (max-width: 767px) and (orientation: portrait),
+    only screen and (max-width: 992px) and (orientation: landscape) {
+    <span class="class">.blockquote .quote__text</span> {
+      font-size: 1.2em;
+    }
+  }
+
+  <span class="class">.blockquote .quote__caption</span> {
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  @media only screen and (max-width: 767px) and (orientation: portrait),
+    only screen and (max-width: 992px) and (orientation: landscape) {
+    <span class="class">.blockquote .quote__caption</span> {
+      font-size: 1em;
+    }
+  }
+
+  <span class="class">.blockquote .quote__caption__cite</span> {
+    display: block;
+    opacity: 0.8;
+    font-size: 0.8em;
+    font-weight: normal;
+    font-style: normal;
+  }
+                </code>
+              </pre>
+            </div>
+          </ip-tab-panel>
+        </div>
+      </ip-tab-panel>
+    </div>
+  </section>
+</main>
+<!-- MAIN END -->

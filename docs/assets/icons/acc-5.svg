@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Wheelchair</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LP-Component-/-Tablet-768px-/-Tab-Panel" transform="translate(-91.000000, -55.000000)">
+            <g id="Group-7" transform="translate(56.000000, 55.000000)">
+                <g id="Wheelchair" transform="translate(35.000000, 0.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                    <circle id="Oval" stroke="#B00057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="11.9859313" cy="5" r="2.5"></circle>
+                    <polyline id="Path" stroke="#B00057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="11.985875 7.5 11.985875 16.5 22.985875 16.5 26.985875 24.5 29.985875 23.5"></polyline>
+                    <path d="M20.9705587,20.5000175 C20.6985369,24.8448637 17.0023027,28.1746914 12.6527299,27.9933025 C8.30315724,27.8119135 4.89700049,24.1858969 4.98767771,19.8334881 C5.07835494,15.4810793 8.63257798,12 12.9859313,12 L19.9859312,12" id="Path" stroke="#B00057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
