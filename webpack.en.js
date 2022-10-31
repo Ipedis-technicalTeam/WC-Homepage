@@ -19,8 +19,15 @@ module.exports = merge(prod, {
     }),
 
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, './src/single-component.html'),
-      filename: 'single-component.html',
+      template: path.join(__dirname, './src/tab-panel.html'),
+      filename: 'tab-panel.html',
+      title: EN.head.title,
+      lang: 'en',
+    }),
+
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, './src/accordeon.html'),
+      filename: 'accordeon.html',
       title: EN.head.title,
       lang: 'en',
     }),

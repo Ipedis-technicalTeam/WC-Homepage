@@ -3,7 +3,7 @@
 
 .container {
   // Try to keep 960px width until screen is too small
-  inline-size: min(calc(80% - $containerPadding), rem(1340));
+  inline-size: min(calc(100% - $containerPadding), rem(1340));
 
   // Margin Left and Right auto
   margin-inline: auto;

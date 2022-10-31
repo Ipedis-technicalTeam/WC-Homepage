@@ -5,13 +5,6 @@
   --focus-color: currentColor;
 
   box-sizing: border-box;
-
-  &:focus,
-  &:focus-visible {
-    outline-offset: em(5);
-    outline: 2px solid var(--focus-color);
-    transition: all $transition-in-out;
-  }
 }
 
 html,
@@ -69,4 +62,11 @@ button {
   color: inherit;
   box-sizing: border-box;
   cursor: pointer;
+
+  &:focus,
+  &:focus-visible {
+    outline-offset: em(5);
+    outline: 2px solid var(--focus-color);
+    transition: all $transition-in-out;
+  }
 }

@@ -3,8 +3,8 @@ const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const htmlPartialsPageNames = require('./src/partials').htmlPartialsPageNames;
-const singleCompPartialsPageNames =
-  require('./src/partials/single-component').singleCompPartialsPageNames;
+const tabPanelPartialsPageNames = require('./src/partials/tab-panel').tabPanelPartialsPageNames;
+const accordeonPartialsPageNames = require('./src/partials/accordeon').accordeonPartialsPageNames;
 const blockquotePartialsPageNames =
   require('./src/partials/blockquote').blockquotePartialsPageNames;
 
@@ -15,10 +15,17 @@ let multipleHtmlPlugins = htmlPartialsPageNames.map(name => {
   });
 });
 
-let multipleSingleCompPlugins = singleCompPartialsPageNames.map(name => {
+let multipleTabPanelPlugins = tabPanelPartialsPageNames.map(name => {
   return new HtmlWebpackPlugin({
-    template: path.join(__dirname, `./src/partials/single-component/${name}.html`),
-    filename: `singleComp-${name}.html`,
+    template: path.join(__dirname, `./src/partials/tab-panel/${name}.html`),
+    filename: `tabPanel-${name}.html`,
+  });
+});
+
+let multipleAccordeonPlugins = accordeonPartialsPageNames.map(name => {
+  return new HtmlWebpackPlugin({
+    template: path.join(__dirname, `./src/partials/accordeon/${name}.html`),
+    filename: `accordeon-${name}.html`,
   });
 });
 
@@ -70,8 +77,15 @@ module.exports = merge(common, {
     }),
 
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, './src/single-component.html'),
-      filename: 'single-component.html',
+      template: path.join(__dirname, './src/tab-panel.html'),
+      filename: 'tab-panel.html',
+      title: 'Development',
+      lang: 'en',
+    }),
+
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, './src/accordeon.html'),
+      filename: 'accordeon.html',
       title: 'Development',
       lang: 'en',
     }),
@@ -89,12 +103,8 @@ module.exports = merge(common, {
     }),
 
     ...multipleHtmlPlugins,
-    ...multipleSingleCompPlugins,
+    ...multipleTabPanelPlugins,
+    ...multipleAccordeonPlugins,
     ...multipleBlockquotePlugins,
-
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, './src/partials/footer.html'),
-      filename: 'footer.html',
-    }),
   ],
 });

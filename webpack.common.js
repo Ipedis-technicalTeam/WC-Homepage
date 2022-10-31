@@ -1,8 +1,8 @@
 const path = require('path');
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 const htmlPartialsPageNames = require('./src/partials').htmlPartialsPageNames;
-const singleCompPartialsPageNames =
-  require('./src/partials/single-component').singleCompPartialsPageNames;
+const tabPanelPartialsPageNames = require('./src/partials/tab-panel').tabPanelPartialsPageNames;
+const accordeonPartialsPageNames = require('./src/partials/accordeon').accordeonPartialsPageNames;
 const blockquotePartialsPageNames =
   require('./src/partials/blockquote').blockquotePartialsPageNames;
 
@@ -15,10 +15,19 @@ let multipleHtmlPartialsPlugins = htmlPartialsPageNames.map(name => {
   };
 });
 
-let multipleSingleCompPartialsPlugins = singleCompPartialsPageNames.map(name => {
+let multipleTabPanelPartialsPlugins = tabPanelPartialsPageNames.map(name => {
   return {
-    path: path.join(__dirname, `./src/partials/single-component/${name}.html`),
-    template_filename: 'single-component.html',
+    path: path.join(__dirname, `./src/partials/tab-panel/${name}.html`),
+    template_filename: 'tab-panel.html',
+    inject: true,
+    location: 'root',
+  };
+});
+
+let multipleAccordeonPlugins = accordeonPartialsPageNames.map(name => {
+  return {
+    path: path.join(__dirname, `./src/partials/accordeon/${name}.html`),
+    template_filename: 'accordeon.html',
     inject: true,
     location: 'root',
   };
@@ -69,19 +78,14 @@ module.exports = {
     new HtmlWebpackPartialsPlugin([
       {
         path: path.join(__dirname, './src/partials/skip-links.html'),
-        template_filename: ['index.html', 'single-component.html', 'blockquote.html'],
+        template_filename: ['index.html', 'tab-panel.html', 'accordeon.html', 'blockquote.html'],
         inject: true,
         location: 'root',
       },
       ...multipleHtmlPartialsPlugins,
-      ...multipleSingleCompPartialsPlugins,
+      ...multipleTabPanelPartialsPlugins,
+      ...multipleAccordeonPlugins,
       ...multipleBlockquotePartialsPlugins,
-      {
-        path: path.join(__dirname, './src/partials/footer.html'),
-        template_filename: ['index.html', 'single-component.html', 'blockquote.html'],
-        inject: true,
-        location: 'root',
-      },
     ]),
   ],
 };

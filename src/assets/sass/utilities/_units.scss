@@ -2,16 +2,16 @@
 
 /*========== Convert Pixels to REM ==========*/
 
-@function rem($pixels) {
-  $rem: math.div($pixels, 16);
+@function rem($pixels, $base: 16) {
+  $rem: math.div($pixels, $base);
 
   @return $rem * 1rem;
 }
 
 /*========== Convert Pixels to EM ==========*/
 
-@function em($pixels) {
-  $em: math.div($pixels, 16);
+@function em($pixels, $base: 16) {
+  $em: math.div($pixels, $base);
 
   @return $em * 1em;
 }

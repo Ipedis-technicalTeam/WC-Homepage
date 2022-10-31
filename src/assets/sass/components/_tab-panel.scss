@@ -75,8 +75,16 @@ ip-tab-panel {
     padding: em(50);
     block-size: rem(775);
 
+    @include mq($ps-mobile) {
+      padding: em(30);
+    }
+
     &.preview {
       padding-inline: rem(200);
+
+      @include mq($ps-tablet) {
+        padding-inline: em(30);
+      }
     }
   }
 }
@@ -129,6 +137,8 @@ ip-tab-panel {
     }
 
     .ip-content-btn {
+      --focus-color: #{$darkColor};
+
       margin-top: 20px;
       font-family: $primaryFontBold;
       font-size: 16px;
@@ -162,10 +172,18 @@ ip-tab-panel {
     justify-content: flex-start;
     padding-block-end: rem(18);
     border-block-end: rem(4) solid darken($lightColor, 9);
+
+    @include mq($ps-mobile) {
+      align-items: flex-start;
+    }
   }
 
   &::part(tab-btn-list) {
-    gap: rem(50);
+    gap: em(50);
+
+    @include mq($ps-mobile) {
+      gap: em(20);
+    }
   }
 
   &::part(tab-btn) {
@@ -185,6 +203,13 @@ ip-tab-panel {
       inline-size: 0;
       background-color: $primaryColor;
       transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &::part(tab-text) {
+    @include mq($ps-mobile) {
+      display: block;
+      font-size: rem(20);
     }
   }
 
