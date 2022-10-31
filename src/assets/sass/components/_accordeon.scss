@@ -11,6 +11,14 @@
 
     display: block;
 
+    &::part(acc-panel) {
+      &:focus-within {
+        outline-offset: em(5);
+        outline: 2px solid var(--focus-color);
+        transition: all $transition-in-out;
+      }
+    }
+
     .acc-content {
       display: flex;
       gap: em(45);
@@ -63,7 +71,9 @@
       }
 
       &__btn {
-        all: unset;
+        --focus-color: #{$darkColor};
+
+        // all: unset;
         display: inline-block;
         color: var(--ip-acc-primary-color);
         padding-inline: em(25);
@@ -72,12 +82,20 @@
         border: 1px solid currentColor;
         border-radius: em(4);
         box-sizing: border-box;
+        outline: 0;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
         &:hover {
           background-color: var(--ip-acc-primary-color);
           color: $lightColor;
+        }
+
+        &:focus,
+        &:focus-visible {
+          outline-offset: em(5);
+          outline: 2px solid var(--focus-color);
+          transition: all $transition-in-out;
         }
       }
 
