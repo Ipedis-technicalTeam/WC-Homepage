@@ -18,8 +18,8 @@
   "license": "ISC",
   "dependencies": {
     "@andreasremdt/simple-translator": "^2.0.4",
-    "ip-accordeon": "^0.0.3",
-    "ip-tab-panel": "^0.0.4",
+    "ip-accordeon": "^0.0.4",
+    "ip-tab-panel": "^0.0.5",
     "sass": "^1.54.4"
   },
   "devDependencies": {

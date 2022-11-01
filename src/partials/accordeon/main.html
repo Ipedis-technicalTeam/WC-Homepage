@@ -4,9 +4,6 @@
     <div class="container">
       <ip-tab-panel
         class="main-tab-panel"
-        data-i18n="header.title.accordeon"
-        data-i18n-attr="tab-panel-title"
-        tab-panel-title="..."
         tab-panel-headers='[
           {"title":"Preview", "imgPath": "assets/icons/preview-icon.svg", "imgPathActive": "assets/icons/preview-icon-white.svg"},
           {"alt":"Code", "imgPath": "assets/icons/code.svg", "imgPathActive": "assets/icons/code-white.svg"},
@@ -16,6 +13,7 @@
       >
         <div class="ip-content demo-accordeon" slot="tab-content-1">
           <ip-accordeon
+            title-tag="h2"
             is-first-panel-open="true"
             is-single-open="true"
             accordeon-headers='[
@@ -30,14 +28,14 @@
               <img class="acc-content__image" src="assets/images/tab-img-1.png" alt="" />
 
               <div class="acc-content__desc-wrapper">
-                <h4 class="acc-content__title">6 Bonnes Pratiques pour être en Conformité</h4>
+                <h3 class="acc-content__title">6 Bonnes Pratiques pour être en Conformité</h3>
                 <p class="acc-content__desc">
-                  Aujourd’hui, encore beaucoup de sites Web et d’applications mobiles sont conçus
-                  sans penser à la navigation des personnes en situation de handicap. Pourtant, pour
-                  ces personnes, l’outil digital représente un véritable levier d’intégration, et
-                  leur apporte bien souvent un surcroît d’indépendance. Selon les différents types
-                  de handicaps, les manquements les plus couramment relevés sur le Web ne sont pas
-                  les mêmes.
+                  Aujourd&apos;hui, encore beaucoup de sites Web et d&apos;applications mobiles sont
+                  conçus sans penser à la navigation des personnes en situation de handicap.
+                  Pourtant, pour ces personnes, l&apos;outil digital représente un véritable levier
+                  d&apos;intégration, et leur apporte bien souvent un surcroît d&apos;indépendance.
+                  Selon les différents types de handicaps, les manquements les plus couramment
+                  relevés sur le Web ne sont pas les mêmes.
                 </p>
                 <a
                   class="acc-content__btn"
@@ -53,14 +51,15 @@
               <img class="acc-content__image" src="assets/images/tab-img-2.png" alt="" />
 
               <div class="acc-content__desc-wrapper">
-                <h4 class="acc-content__title">Comment ont été conçus les PDF ?</h4>
+                <h3 class="acc-content__title">Comment ont été conçus les PDF ?</h3>
                 <p class="acc-content__desc">
-                  À l’origine, les documents PDF n’étaient pas conçus pour être lus via un
-                  ordinateur mais pour être imprimés. Aujourd’hui, les documents PDF sont de plus en
-                  plus utilisés par les entreprises pour échanger et diffuser de l’information
-                  numérique de façon plus professionnelle (présentation, sécurité pour la protection
-                  de données). Sans traitement, les documents PDF sont inaccessibles pour des
-                  personnes non-voyantes utilisant des outils tels qu’un lecteur d’écran.
+                  À l&apos;origine, les documents PDF n&apos;étaient pas conçus pour être lus via un
+                  ordinateur mais pour être imprimés. Aujourd&apos;hui, les documents PDF sont de
+                  plus en plus utilisés par les entreprises pour échanger et diffuser de
+                  l&apos;information numérique de façon plus professionnelle (présentation, sécurité
+                  pour la protection de données). Sans traitement, les documents PDF sont
+                  inaccessibles pour des personnes non-voyantes utilisant des outils tels qu&apos;un
+                  lecteur d&apos;écran.
                 </p>
                 <a
                   class="acc-content__btn"
@@ -76,14 +75,14 @@
               <img class="acc-content__image" src="assets/images/tab-img-3.png" alt="" />
 
               <div class="acc-content__desc-wrapper">
-                <h4 class="acc-content__title">Gérer efficacement la création</h4>
+                <h3 class="acc-content__title">Gérer efficacement la création</h3>
                 <p class="acc-content__desc">
                   PubliSpeak a été pensé pour vous faciliter la gestion de vos publications. Toutes
                   les informations relatives à votre publication sont consultables en un clin d'œil.
                   Titre, clients, nombre de pages, langues, dates et statuts. Les statuts font
-                  intégralement partie du cycle de vie d’une publication et de votre gestion de
+                  intégralement partie du cycle de vie d&apos;une publication et de votre gestion de
                   projet. Rendre visible son travail pour le faire valider par ses collaborateurs ou
-                  ses clients n’est pas de tout repos.
+                  ses clients n&apos;est pas de tout repos.
                 </p>
                 <a
                   class="acc-content__btn"
@@ -99,14 +98,15 @@
               <img class="acc-content__image" src="assets/images/tab-img-4.jpeg" alt="" />
 
               <div class="acc-content__desc-wrapper">
-                <h4 class="acc-content__title">Nos équipes vous accompagnent</h4>
+                <h3 class="acc-content__title">Nos équipes vous accompagnent</h3>
                 <p class="acc-content__desc">
-                  Notre plateforme de publications digitales répond à vos besoins mais vous n’êtes
-                  pas à l'aise avec l’accessibilité numérique .Pas de panique, onboarding, formation
-                  et support, nos équipes vous accompagnent vers l’autonomie et la prise en main de
-                  l’accessibilité numérique.Associez vos publications entre elles et construisez un
-                  corpus de documents afin de permettre à votre lecteur de naviguer facilement entre
-                  vos différentes publications.
+                  Notre plateforme de publications digitales répond à vos besoins mais vous
+                  n&apos;êtes pas à l'aise avec l&apos;accessibilité numérique .Pas de panique,
+                  onboarding, formation et support, nos équipes vous accompagnent vers
+                  l&apos;autonomie et la prise en main de l&apos;accessibilité numérique.Associez
+                  vos publications entre elles et construisez un corpus de documents afin de
+                  permettre à votre lecteur de naviguer facilement entre vos différentes
+                  publications.
                 </p>
                 <a
                   class="acc-content__btn"
@@ -122,14 +122,14 @@
               <img class="acc-content__image" src="assets/images/tab-img-5.jpg" alt="" />
 
               <div class="acc-content__desc-wrapper">
-                <h4 class="acc-content__title">Valider votre travail auprès de vos clients</h4>
+                <h3 class="acc-content__title">Valider votre travail auprès de vos clients</h3>
                 <p class="acc-content__desc">
-                  PubliSpeak est un SaaS prêt à l’emploi. Il permet de charger votre fichier PDF
-                  initial final en un clic et de personnaliser la publication selon vos envies.
-                  L’éditeur est un formidable moteur de création pour la vue article. Et plus les
-                  lecteurs restent, plus ils sont convaincus ! Si le temps vous manque, des
-                  “inspirations” sont prêtes à l’emploi ! Néanmoins, si vous préférez déléguer la
-                  partie édition, notre studio dédié s’en chargera.
+                  PubliSpeak est un SaaS prêt à l&apos;emploi. Il permet de charger votre fichier
+                  PDF initial final en un clic et de personnaliser la publication selon vos envies.
+                  L&apos;éditeur est un formidable moteur de création pour la vue article. Et plus
+                  les lecteurs restent, plus ils sont convaincus ! Si le temps vous manque, des
+                  “inspirations” sont prêtes à l&apos;emploi ! Néanmoins, si vous préférez déléguer
+                  la partie édition, notre studio dédié s&apos;en chargera.
                 </p>
                 <a
                   class="acc-content__btn"
@@ -149,22 +149,22 @@
             tab-panel-headers='[{"title":"HTML"}, {"title": "CSS"}, {"title": "Javascript"}]'
           >
             <div class="ip-content" slot="tab-content-1">
-              <h4>Hello HTML</h4>
+              <h3>Hello HTML</h3>
             </div>
 
             <div class="ip-content" slot="tab-content-2">
-              <h4>Hello CSS</h4>
+              <h3>Hello CSS</h3>
             </div>
 
             <div class="ip-content" slot="tab-content-3">
-              <h4>Hello Javascript</h4>
+              <h3>Hello Javascript</h3>
             </div>
           </ip-tab-panel>
         </div>
 
         <div class="ip-content accessibility-panel" slot="tab-content-3">
           <div>
-            <h4 class="header">Recommendation</h4>
+            <h3 class="header">Recommendation</h3>
 
             <h5 class="title">Tab&nbsp;Container &#8209; div</h5>
             <ul class="arrow-list">
@@ -250,7 +250,7 @@
           </div>
 
           <div>
-            <h4 class="header">Keyboard&nbsp;Support</h4>
+            <h3 class="header">Keyboard&nbsp;Support</h3>
 
             <h5 class="title">Tab</h5>
 

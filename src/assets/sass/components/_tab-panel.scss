@@ -41,10 +41,7 @@ ip-tab-panel {
     padding-inline: em(30);
     padding-block: em(25);
     border-block-end: 2px solid darken($lightColor, 9);
-  }
-
-  &::part(tab-panel-title) {
-    font-size: rem(24);
+    justify-content: flex-end;
   }
 
   &::part(tab-btn-list) {
@@ -95,7 +92,11 @@ ip-tab-panel {
 
 .demo-tab-panel {
   &::part(tab-container) {
-    justify-content: center;
+    justify-content: space-between;
+  }
+
+  &::part(tab-panel-title) {
+    font-size: rem(24);
   }
 
   > .ip-content {

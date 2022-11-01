@@ -4,9 +4,6 @@
     <div class="container">
       <ip-tab-panel
         class="main-tab-panel"
-        data-i18n="header.title.tabPanel"
-        data-i18n-attr="tab-panel-title"
-        tab-panel-title="..."
         tab-panel-headers='[
           {"title":"Preview", "imgPath": "assets/icons/preview-icon.svg", "imgPathActive": "assets/icons/preview-icon-white.svg"},
           {"alt":"Code", "imgPath": "assets/icons/code.svg", "imgPathActive": "assets/icons/code-white.svg"},
@@ -16,6 +13,8 @@
       >
         <div class="ip-content" slot="tab-content-1">
           <ip-tab-panel
+            title-tag="h2"
+            tab-panel-title="Nos&nbsp;&eacute;quipes"
             class="demo-tab-panel"
             tab-panel-headers='[
               {"title":"Accessibilité", "imgPath": "assets/icons/acc-1.svg", "imgPathActive": "assets/icons/acc-1-active.svg"},
