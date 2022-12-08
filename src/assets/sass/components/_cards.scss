@@ -19,6 +19,11 @@
     transition: transform $transition-in-out;
     overflow: hidden;
 
+    a {
+      inline-size: 100%;
+      block-size: 100%;
+    }
+
     &:hover,
     &:focus-within {
       transform: scale(1.03);
