@@ -3,6 +3,7 @@ import './js/skipLinks';
 import './js/translation';
 import '../node_modules/ip-tab-panel/dist/ip-tab-panel/ip-tab-panel.esm';
 import '../node_modules/ip-accordeon/dist/ip-accordeon/ip-accordeon.esm';
+import '../node_modules/ip-d14-slider/dist/ip-slider/ip-slider.esm';
 
 const icons = document.querySelectorAll('.sidebar-menu > h2 span img');
 

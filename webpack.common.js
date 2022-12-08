@@ -3,6 +3,7 @@ const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 const htmlPartialsPageNames = require('./src/partials').htmlPartialsPageNames;
 const tabPanelPartialsPageNames = require('./src/partials/tab-panel').tabPanelPartialsPageNames;
 const accordeonPartialsPageNames = require('./src/partials/accordeon').accordeonPartialsPageNames;
+const sliderPartialsPageNames = require('./src/partials/slider').sliderPartialsPageNames;
 const blockquotePartialsPageNames =
   require('./src/partials/blockquote').blockquotePartialsPageNames;
 
@@ -28,6 +29,15 @@ let multipleAccordeonPlugins = accordeonPartialsPageNames.map(name => {
   return {
     path: path.join(__dirname, `./src/partials/accordeon/${name}.html`),
     template_filename: 'accordeon.html',
+    inject: true,
+    location: 'root',
+  };
+});
+
+let multipleSliderPlugins = sliderPartialsPageNames.map(name => {
+  return {
+    path: path.join(__dirname, `./src/partials/slider/${name}.html`),
+    template_filename: 'slider.html',
     inject: true,
     location: 'root',
   };
@@ -78,13 +88,20 @@ module.exports = {
     new HtmlWebpackPartialsPlugin([
       {
         path: path.join(__dirname, './src/partials/skip-links.html'),
-        template_filename: ['index.html', 'tab-panel.html', 'accordeon.html', 'blockquote.html'],
+        template_filename: [
+          'index.html',
+          'tab-panel.html',
+          'accordeon.html',
+          'slider.html',
+          'blockquote.html',
+        ],
         inject: true,
         location: 'root',
       },
       ...multipleHtmlPartialsPlugins,
       ...multipleTabPanelPartialsPlugins,
       ...multipleAccordeonPlugins,
+      ...multipleSliderPlugins,
       ...multipleBlockquotePartialsPlugins,
     ]),
   ],

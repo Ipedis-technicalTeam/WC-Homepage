@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const htmlPartialsPageNames = require('./src/partials').htmlPartialsPageNames;
 const tabPanelPartialsPageNames = require('./src/partials/tab-panel').tabPanelPartialsPageNames;
 const accordeonPartialsPageNames = require('./src/partials/accordeon').accordeonPartialsPageNames;
+const sliderPartialsPageNames = require('./src/partials/slider').sliderPartialsPageNames;
 const blockquotePartialsPageNames =
   require('./src/partials/blockquote').blockquotePartialsPageNames;
 
@@ -29,12 +30,21 @@ let multipleAccordeonPlugins = accordeonPartialsPageNames.map(name => {
   });
 });
 
+let multipleSliderPlugins = sliderPartialsPageNames.map(name => {
+  return new HtmlWebpackPlugin({
+    template: path.join(__dirname, `./src/partials/slider/${name}.html`),
+    filename: `slider-${name}.html`,
+  });
+});
+
 let multipleBlockquotePlugins = blockquotePartialsPageNames.map(name => {
   return new HtmlWebpackPlugin({
     template: path.join(__dirname, `./src/partials/blockquote/${name}.html`),
     filename: `blockquote-${name}.html`,
   });
 });
+
+const currentLang = 'en';
 
 module.exports = merge(common, {
   mode: 'development',
@@ -73,28 +83,35 @@ module.exports = merge(common, {
       template: path.join(__dirname, './src/index.html'),
       filename: 'index.html',
       title: 'Development',
-      lang: 'en',
+      lang: currentLang,
     }),
 
     new HtmlWebpackPlugin({
       template: path.join(__dirname, './src/tab-panel.html'),
       filename: 'tab-panel.html',
       title: 'Development',
-      lang: 'en',
+      lang: currentLang,
     }),
 
     new HtmlWebpackPlugin({
       template: path.join(__dirname, './src/accordeon.html'),
       filename: 'accordeon.html',
       title: 'Development',
-      lang: 'en',
+      lang: currentLang,
+    }),
+
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, './src/slider.html'),
+      filename: 'slider.html',
+      title: 'Development',
+      lang: currentLang,
     }),
 
     new HtmlWebpackPlugin({
       template: path.join(__dirname, './src/blockquote.html'),
       filename: 'blockquote.html',
       title: 'Development',
-      lang: 'en',
+      lang: currentLang,
     }),
 
     new HtmlWebpackPlugin({
@@ -105,6 +122,7 @@ module.exports = merge(common, {
     ...multipleHtmlPlugins,
     ...multipleTabPanelPlugins,
     ...multipleAccordeonPlugins,
+    ...multipleSliderPlugins,
     ...multipleBlockquotePlugins,
   ],
 });

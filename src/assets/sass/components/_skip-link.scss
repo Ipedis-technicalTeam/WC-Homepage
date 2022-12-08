@@ -2,17 +2,15 @@
 @use '../utilities' as *;
 
 #skip-links {
-  transform: translateY(-100vh);
+  position: absolute;
+  inset-block-start: 0; // Top
+  inset-inline: 0; // Left and Right
   background-color: $bodyTextColor;
   color: contrast($bodyTextColor, $lightColor, $darkColor);
-  align-items: start;
   z-index: 99999;
-  padding-block-end: 0;
 
   &:focus-within {
-    padding: $containerPadding;
-    transform: translateY(0);
-    transition: all 0.3s ease-in-out;
+    padding: 5vmin;
   }
 }
 

@@ -6,8 +6,7 @@
   grid-auto-flow: row;
   grid-auto-rows: auto;
   grid-template-columns: 1fr;
-  // gap: em(40);
-  // padding-block: em(40);
+  gap: em(40);
   padding-block-end: em(80);
 
   inline-size: 100%; // Width
@@ -20,11 +19,7 @@
   background-size: contain;
   color: $bodyTextColor;
 
-  > * {
-    padding-block-end: rem(40);
-
-    &:last-child {
-      padding-block-end: 0;
-    }
+  .slider-page & {
+    background-image: none;
   }
 }
