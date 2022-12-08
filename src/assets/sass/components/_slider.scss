@@ -1,0 +1,53 @@
+
+/** TEMPORILARY DESIGN TO TEST SLIDER **/
+
+.slider {
+  .slider-content {
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      min-height: 300px;
+      background-color: rgba(#ececec, 0.5);
+      margin: 20px;
+
+      &:focus {
+        outline: 1px solid black;
+        outline-offset: -5px;
+      }
+
+      img {
+        padding-bottom: 25px;
+      }
+    }
+  }
+}
+
+ip-slider-sl-1::part(left-btn) {
+
+  left: -40px;
+
+  &:focus {
+    outline: 1px solid black;
+    outline-offset: 5px;
+  }
+}
+
+ip-slider-sl-1::part(right-btn) {
+  right: -40px;
+  &:focus {
+    outline: 2px solid black;
+    outline-offset: 10px;
+  }
+}
+
+ip-slider-sl-1::part(bullet-btn) {
+  &:focus {
+    outline: 2px solid black;
+    outline-offset: 4px;
+  }
+}
+
+
