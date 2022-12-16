@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ShieldCheck</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LP-Component-/-Tablet-768px-/-Tab-Panel" transform="translate(-518.000000, -55.000000)">
+            <g id="Group-8" transform="translate(463.000000, 35.000000)">
+                <g id="Group-4" transform="translate(20.000000, 20.000000)">
+                    <g id="ShieldCheck" transform="translate(35.000000, 0.000000)">
+                        <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                        <path d="M5,14.3333337 L5,7 C5,6.44771525 5.44771525,6 6,6 L26,6 C26.5522847,6 27,6.44771525 27,7 L27,14.3333337 C27,24.83525 18.08675,28.3146037 16.307025,28.9046562 C16.1080684,28.97313 15.8919316,28.97313 15.692975,28.9046562 C13.91325,28.3146037 5,24.83525 5,14.3333337 Z" id="Path" stroke="#B00057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <polyline id="Path" stroke="#B00057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="21.5 13 14.166625 20 10.5 16.5"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
