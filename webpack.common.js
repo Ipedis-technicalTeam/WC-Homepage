@@ -4,8 +4,8 @@ const htmlPartialsPageNames = require('./src/partials').htmlPartialsPageNames;
 const tabPanelPartialsPageNames = require('./src/partials/tab-panel').tabPanelPartialsPageNames;
 const accordeonPartialsPageNames = require('./src/partials/accordeon').accordeonPartialsPageNames;
 const sliderPartialsPageNames = require('./src/partials/slider').sliderPartialsPageNames;
-const blockquotePartialsPageNames =
-  require('./src/partials/blockquote').blockquotePartialsPageNames;
+const sliderPartialsPageNames_v2 = require('./src/partials/slider_v2').sliderPartialsPageNames_v2;
+const blockquotePartialsPageNames = require('./src/partials/blockquote').blockquotePartialsPageNames;
 
 let multipleHtmlPartialsPlugins = htmlPartialsPageNames.map(name => {
   return {
@@ -38,6 +38,15 @@ let multipleSliderPlugins = sliderPartialsPageNames.map(name => {
   return {
     path: path.join(__dirname, `./src/partials/slider/${name}.html`),
     template_filename: 'slider.html',
+    inject: true,
+    location: 'root',
+  };
+});
+
+let multipleSliderPlugins_v2 = sliderPartialsPageNames_v2.map(name => {
+  return {
+    path: path.join(__dirname, `./src/partials/slider_v2/${name}.html`),
+    template_filename: 'slider_v2.html',
     inject: true,
     location: 'root',
   };
@@ -93,6 +102,7 @@ module.exports = {
           'tab-panel.html',
           'accordeon.html',
           'slider.html',
+          'slider_v2.html',
           'blockquote.html',
         ],
         inject: true,
@@ -102,7 +112,8 @@ module.exports = {
       ...multipleTabPanelPartialsPlugins,
       ...multipleAccordeonPlugins,
       ...multipleSliderPlugins,
-      ...multipleBlockquotePartialsPlugins,
+      ...multipleSliderPlugins_v2,
+      ...multipleBlockquotePartialsPlugins
     ]),
   ],
 };

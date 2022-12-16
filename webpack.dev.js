@@ -6,8 +6,8 @@ const htmlPartialsPageNames = require('./src/partials').htmlPartialsPageNames;
 const tabPanelPartialsPageNames = require('./src/partials/tab-panel').tabPanelPartialsPageNames;
 const accordeonPartialsPageNames = require('./src/partials/accordeon').accordeonPartialsPageNames;
 const sliderPartialsPageNames = require('./src/partials/slider').sliderPartialsPageNames;
-const blockquotePartialsPageNames =
-  require('./src/partials/blockquote').blockquotePartialsPageNames;
+const sliderPartialsPageNames_v2 = require('./src/partials/slider_v2').sliderPartialsPageNames_v2;
+const blockquotePartialsPageNames = require('./src/partials/blockquote').blockquotePartialsPageNames;
 
 let multipleHtmlPlugins = htmlPartialsPageNames.map(name => {
   return new HtmlWebpackPlugin({
@@ -34,6 +34,13 @@ let multipleSliderPlugins = sliderPartialsPageNames.map(name => {
   return new HtmlWebpackPlugin({
     template: path.join(__dirname, `./src/partials/slider/${name}.html`),
     filename: `slider-${name}.html`,
+  });
+});
+
+let multipleSliderPlugins_v2 = sliderPartialsPageNames_v2.map(name => {
+  return new HtmlWebpackPlugin({
+    template: path.join(__dirname, `./src/partials/slider_v2/${name}.html`),
+    filename: `slider_v2-${name}.html`,
   });
 });
 
@@ -108,6 +115,13 @@ module.exports = merge(common, {
     }),
 
     new HtmlWebpackPlugin({
+      template: path.join(__dirname, './src/slider_v2.html'),
+      filename: 'slider_v2.html',
+      title: 'Development',
+      lang: currentLang,
+    }),
+
+    new HtmlWebpackPlugin({
       template: path.join(__dirname, './src/blockquote.html'),
       filename: 'blockquote.html',
       title: 'Development',
@@ -124,5 +138,6 @@ module.exports = merge(common, {
     ...multipleAccordeonPlugins,
     ...multipleSliderPlugins,
     ...multipleBlockquotePlugins,
+    ...multipleSliderPlugins_v2
   ],
 });

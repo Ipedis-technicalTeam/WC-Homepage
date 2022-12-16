@@ -40,6 +40,13 @@ module.exports = merge(prod, {
     }),
 
     new HtmlWebpackPlugin({
+      template: path.join(__dirname, './src/slider_v2.html'),
+      filename: 'slider_v2.html',
+      title: EN.head.title,
+      lang: 'en',
+    }),
+
+    new HtmlWebpackPlugin({
       template: path.join(__dirname, './src/blockquote.html'),
       filename: 'blockquote.html',
       title: EN.head.title,
