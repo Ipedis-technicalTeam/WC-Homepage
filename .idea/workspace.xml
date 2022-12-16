@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3b2350d-d166-48d1-9840-d3b7588a2ab0" name="Default Changelist" comment="slider implemetation to test accessibility">
-      <change afterPath="$PROJECT_DIR$/.idea/WC-Homepage.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/341.0421a26df8eabd3c4e92.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/761.1fa149b14f409d3bff49.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/accordeon.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/accordeon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blockquote.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/blockquote.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.e4ffd9f715fdaa8d883d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.e4ffd9f715fdaa8d883d.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/runtime.c7b135b48f8497f6d9c7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/slider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tab-panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tab-panel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/sass/components/_slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/components/_slider.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/slider/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/slider/main.html" afterDir="false" />
+    <list default="true" id="b3b2350d-d166-48d1-9840-d3b7588a2ab0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/slider3/pause.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/slider3/play.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/slider3/slide-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/slider3/slide-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/slider3/slide-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/slider3/slide-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/slider3/slide-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partials/slider_v2/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/slider_v2/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +62,7 @@
       <workItem from="1671167545936" duration="1253000" />
       <workItem from="1671169883637" duration="1124000" />
       <workItem from="1671186308375" duration="96000" />
-      <workItem from="1671194040334" duration="472000" />
+      <workItem from="1671194040334" duration="1041000" />
     </task>
     <task id="LOCAL-00001" summary="slider implemetation to test accessibility">
       <created>1670496258320</created>
@@ -87,26 +78,40 @@
       <option name="project" value="LOCAL" />
       <updated>1671170019654</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="slider implemetation to test accessibility">
+      <created>1671194661321</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671194661321</updated>
+    </task>
+    <task id="LOCAL-00004" summary="slider implemetation to test accessibility">
+      <created>1671194683849</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671194683849</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="slider implemetation to test accessibility" />
     <MESSAGE value="slider - v2 -  implemetation to test accessibility" />
-    <option name="LAST_COMMIT_MESSAGE" value="slider - v2 -  implemetation to test accessibility" />
+    <MESSAGE value="slider implemetation to test accessibility" />
+    <option name="LAST_COMMIT_MESSAGE" value="slider implemetation to test accessibility" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="380" y="88" width="1222" height="911" key="CommitChangelistDialog2" timestamp="1671170019513">
+    <state x="380" y="88" width="1222" height="911" key="CommitChangelistDialog2" timestamp="1671194683802">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="380" y="88" width="1222" height="911" key="CommitChangelistDialog2/1920.0.1920.1080/72.27.1848.1053@72.27.1848.1053" timestamp="1671170019513" />
-    <state x="218" y="96" width="1536" height="901" key="DiffContextDialog" timestamp="1671169927819">
+    <state x="380" y="88" width="1222" height="911" key="CommitChangelistDialog2/1920.0.1920.1080/72.27.1848.1053@72.27.1848.1053" timestamp="1671194683802" />
+    <state x="218" y="96" width="1536" height="901" key="DiffContextDialog" timestamp="1671194524436">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="218" y="96" width="1536" height="901" key="DiffContextDialog/1920.0.1920.1080/72.27.1848.1053@72.27.1848.1053" timestamp="1671169927819" />
+    <state x="218" y="96" width="1536" height="901" key="DiffContextDialog/1920.0.1920.1080/72.27.1848.1053@72.27.1848.1053" timestamp="1671194524436" />
     <state x="687" y="279" width="618" height="522" key="find.popup" timestamp="1671194288851">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
