@@ -1,7 +1,15 @@
-
+@use '../theme' as *;
+@use '../utilities' as *;
 /** TEMPORILARY DESIGN TO TEST SLIDER **/
 
 .slider {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  @include mq($ps-mobile) {
+    max-width: 100%;
+  }
+
   .slider-content {
     a {
       display: flex;
