@@ -5,9 +5,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const htmlPartialsPageNames = require('./src/partials').htmlPartialsPageNames;
 const tabPanelPartialsPageNames = require('./src/partials/tab-panel').tabPanelPartialsPageNames;
 const accordeonPartialsPageNames = require('./src/partials/accordeon').accordeonPartialsPageNames;
+const accordeon2PartialsPageNames =
+  require('./src/partials/accordeon-2').accordeon2PartialsPageNames;
 const sliderPartialsPageNames = require('./src/partials/slider').sliderPartialsPageNames;
 const sliderPartialsPageNames_v2 = require('./src/partials/slider_v2').sliderPartialsPageNames_v2;
-const blockquotePartialsPageNames = require('./src/partials/blockquote').blockquotePartialsPageNames;
+const blockquotePartialsPageNames =
+  require('./src/partials/blockquote').blockquotePartialsPageNames;
 
 let multipleHtmlPlugins = htmlPartialsPageNames.map(name => {
   return new HtmlWebpackPlugin({
@@ -27,6 +30,13 @@ let multipleAccordeonPlugins = accordeonPartialsPageNames.map(name => {
   return new HtmlWebpackPlugin({
     template: path.join(__dirname, `./src/partials/accordeon/${name}.html`),
     filename: `accordeon-${name}.html`,
+  });
+});
+
+let multipleAccordeon2Plugins = accordeon2PartialsPageNames.map(name => {
+  return new HtmlWebpackPlugin({
+    template: path.join(__dirname, `./src/partials/accordeon-2/${name}.html`),
+    filename: `accordeon-2-${name}.html`,
   });
 });
 
@@ -108,6 +118,13 @@ module.exports = merge(common, {
     }),
 
     new HtmlWebpackPlugin({
+      template: path.join(__dirname, './src/accordeon-2.html'),
+      filename: 'accordeon-2.html',
+      title: 'Development',
+      lang: currentLang,
+    }),
+
+    new HtmlWebpackPlugin({
       template: path.join(__dirname, './src/slider.html'),
       filename: 'slider.html',
       title: 'Development',
@@ -136,8 +153,9 @@ module.exports = merge(common, {
     ...multipleHtmlPlugins,
     ...multipleTabPanelPlugins,
     ...multipleAccordeonPlugins,
+    ...multipleAccordeon2Plugins,
     ...multipleSliderPlugins,
     ...multipleBlockquotePlugins,
-    ...multipleSliderPlugins_v2
+    ...multipleSliderPlugins_v2,
   ],
 });

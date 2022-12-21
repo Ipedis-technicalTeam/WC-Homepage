@@ -3,9 +3,12 @@ const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 const htmlPartialsPageNames = require('./src/partials').htmlPartialsPageNames;
 const tabPanelPartialsPageNames = require('./src/partials/tab-panel').tabPanelPartialsPageNames;
 const accordeonPartialsPageNames = require('./src/partials/accordeon').accordeonPartialsPageNames;
+const accordeon2PartialsPageNames =
+  require('./src/partials/accordeon-2').accordeon2PartialsPageNames;
 const sliderPartialsPageNames = require('./src/partials/slider').sliderPartialsPageNames;
 const sliderPartialsPageNames_v2 = require('./src/partials/slider_v2').sliderPartialsPageNames_v2;
-const blockquotePartialsPageNames = require('./src/partials/blockquote').blockquotePartialsPageNames;
+const blockquotePartialsPageNames =
+  require('./src/partials/blockquote').blockquotePartialsPageNames;
 
 let multipleHtmlPartialsPlugins = htmlPartialsPageNames.map(name => {
   return {
@@ -29,6 +32,15 @@ let multipleAccordeonPlugins = accordeonPartialsPageNames.map(name => {
   return {
     path: path.join(__dirname, `./src/partials/accordeon/${name}.html`),
     template_filename: 'accordeon.html',
+    inject: true,
+    location: 'root',
+  };
+});
+
+let multipleAccordeon2Plugins = accordeon2PartialsPageNames.map(name => {
+  return {
+    path: path.join(__dirname, `./src/partials/accordeon-2/${name}.html`),
+    template_filename: 'accordeon-2.html',
     inject: true,
     location: 'root',
   };
@@ -101,6 +113,7 @@ module.exports = {
           'index.html',
           'tab-panel.html',
           'accordeon.html',
+          'accordeon-2.html',
           'slider.html',
           'slider_v2.html',
           'blockquote.html',
@@ -111,9 +124,10 @@ module.exports = {
       ...multipleHtmlPartialsPlugins,
       ...multipleTabPanelPartialsPlugins,
       ...multipleAccordeonPlugins,
+      ...multipleAccordeon2Plugins,
       ...multipleSliderPlugins,
       ...multipleSliderPlugins_v2,
-      ...multipleBlockquotePartialsPlugins
+      ...multipleBlockquotePartialsPlugins,
     ]),
   ],
 };

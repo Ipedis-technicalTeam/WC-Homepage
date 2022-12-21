@@ -33,6 +33,13 @@ module.exports = merge(prod, {
     }),
 
     new HtmlWebpackPlugin({
+      template: path.join(__dirname, './src/accordeon-2.html'),
+      filename: 'accordeon-2.html',
+      title: FR.head.title,
+      lang: 'fr',
+    }),
+
+    new HtmlWebpackPlugin({
       template: path.join(__dirname, './src/slider.html'),
       filename: 'slider.html',
       title: FR.head.title,

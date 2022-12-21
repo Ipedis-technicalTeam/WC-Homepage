@@ -1,0 +1,31 @@
+@use '../theme' as *;
+@use '../utilities' as *;
+
+.ip-accordeon-2 {
+  .container {
+    max-width: 1024px;
+    height: 70vh;
+    border: 2px solid red;
+    margin: 0 auto;
+    background: blueviolet;
+  }
+}
+
+ip-accordeon-2 {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  .acc-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: rem(30);
+
+    &__image {
+      display: none;
+    }
+  }
+}
