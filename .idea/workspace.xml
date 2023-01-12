@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3b2350d-d166-48d1-9840-d3b7588a2ab0" name="Default Changelist" comment="" />
+    <list default="true" id="b3b2350d-d166-48d1-9840-d3b7588a2ab0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +55,7 @@
       <workItem from="1671169883637" duration="1124000" />
       <workItem from="1671186308375" duration="96000" />
       <workItem from="1671194040334" duration="1041000" />
-      <workItem from="1673506696381" duration="457000" />
+      <workItem from="1673506696381" duration="941000" />
     </task>
     <task id="LOCAL-00001" summary="slider implemetation to test accessibility">
       <created>1670496258320</created>
@@ -104,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673506939923</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update slider">
+      <created>1673507155727</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673507155727</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,10 +127,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="update slider" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="380" y="88" width="1222" height="911" key="CommitChangelistDialog2" timestamp="1673506939814">
+    <state x="380" y="88" width="1222" height="911" key="CommitChangelistDialog2" timestamp="1673507155679">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="380" y="88" width="1222" height="911" key="CommitChangelistDialog2/1920.0.1920.1080/72.27.1848.1053@72.27.1848.1053" timestamp="1673506939814" />
+    <state x="380" y="88" width="1222" height="911" key="CommitChangelistDialog2/1920.0.1920.1080/72.27.1848.1053@72.27.1848.1053" timestamp="1673507155679" />
     <state x="218" y="96" width="1536" height="901" key="DiffContextDialog" timestamp="1673263407410">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
