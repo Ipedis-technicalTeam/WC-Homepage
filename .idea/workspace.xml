@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/slider_v2/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/slider_v2/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +60,9 @@
       <workItem from="1673506696381" duration="941000" />
       <workItem from="1673584747586" duration="118000" />
       <workItem from="1673590846642" duration="249000" />
+      <workItem from="1673592497320" duration="668000" />
+      <workItem from="1673605643044" duration="604000" />
+      <workItem from="1673607133334" duration="235000" />
     </task>
     <task id="LOCAL-00001" summary="slider implemetation to test accessibility">
       <created>1670496258320</created>
@@ -118,7 +120,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673507155727</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update slider">
+      <created>1673592626552</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673592626552</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update slider">
+      <created>1673592672886</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1673592672886</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,10 +148,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="update slider" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="380" y="88" width="1222" height="911" key="CommitChangelistDialog2" timestamp="1673507155679">
+    <state x="380" y="88" width="1222" height="911" key="CommitChangelistDialog2" timestamp="1673592672832">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="380" y="88" width="1222" height="911" key="CommitChangelistDialog2/1920.0.1920.1080/72.27.1848.1053@72.27.1848.1053" timestamp="1673507155679" />
+    <state x="380" y="88" width="1222" height="911" key="CommitChangelistDialog2/1920.0.1920.1080/72.27.1848.1053@72.27.1848.1053" timestamp="1673592672832" />
     <state x="218" y="96" width="1536" height="901" key="DiffContextDialog" timestamp="1673263407410">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>

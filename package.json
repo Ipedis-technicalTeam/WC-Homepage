@@ -18,7 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "@andreasremdt/simple-translator": "^2.0.4",
-    "ip-accordeon": "^0.0.10",
+    "ip-accordeon": "^0.0.14",
     "ip-d14-slider": "^0.0.41",
     "ip-tab-panel": "^0.0.5",
     "sass": "^1.54.4"
