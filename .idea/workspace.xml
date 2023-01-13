@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b3b2350d-d166-48d1-9840-d3b7588a2ab0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partials/slider_v2/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/slider_v2/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +59,8 @@
       <workItem from="1671186308375" duration="96000" />
       <workItem from="1671194040334" duration="1041000" />
       <workItem from="1673506696381" duration="941000" />
+      <workItem from="1673584747586" duration="118000" />
+      <workItem from="1673590846642" duration="249000" />
     </task>
     <task id="LOCAL-00001" summary="slider implemetation to test accessibility">
       <created>1670496258320</created>
