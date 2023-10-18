@@ -14,25 +14,29 @@ ip-tab-panel {
   &::part(tab-text) {
     font-family: $primaryFontRegular;
   }
+}
 
-  > .ip-content {
-    font-family: $primaryFontRegular;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: darken($tabBackgroundColor, 3);
-    border-block-start: 2px solid darken($tabBackgroundColor, 9);
-    box-sizing: border-box;
+.acc-btn {
+  background: red!important;
+}
 
-    ip-tab-panel {
-      display: contents;
-      inline-size: 100%;
-      block-size: 100%;
-      background-color: unset;
-      border-radius: 0;
-      box-shadow: none;
-      overflow: visible;
-    }
+.ip-content {
+  font-family: $primaryFontRegular;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: darken($tabBackgroundColor, 3);
+  border-block-start: 2px solid darken($tabBackgroundColor, 9);
+  box-sizing: border-box;
+
+  ip-tab-panel {
+    display: contents;
+    inline-size: 100%;
+    block-size: 100%;
+    background-color: unset;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
   }
 }
 
@@ -67,27 +71,38 @@ ip-tab-panel {
     background-color: $darkColor;
     color: $lightColor;
   }
+}
 
-  > .ip-content {
-    padding: em(50);
-    block-size: rem(775);
+.ip-content {
+  padding: 3.125em;
+  block-size: 100%;
+  inline-size: 100%;
+  border-radius: 0.9375em;
+  box-shadow: 0 0 0.75rem rgba(0,0,0,.25);
+  overflow: hidden;
+  box-sizing: border-box;
 
-    @include mq($ps-mobile) {
-      padding: em(30);
-    }
+  @include mq($ps-mobile) {
+    padding: em(30);
+  }
 
-    &.preview {
-      padding-inline: rem(200);
+  &.preview {
+    padding-inline: rem(200);
 
-      @include mq($ps-tablet) {
-        padding-inline: em(30);
-      }
+    @include mq($ps-tablet) {
+      padding-inline: em(30);
     }
   }
 }
 
 .ip-content:has(.demo-tab-panel) {
   overflow-y: visible;
+}
+
+.ip-content.tab-detail {
+  box-shadow: none;
+  padding: 0;
+  padding-top: 3.125em;
 }
 
 .demo-tab-panel {
@@ -97,6 +112,7 @@ ip-tab-panel {
 
   &::part(tab-panel-title) {
     font-size: rem(24);
+    font-family: "OpenSans-Bold", sans-serif;
   }
 
   > .ip-content {
