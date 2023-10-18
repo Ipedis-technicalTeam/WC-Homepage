@@ -62,6 +62,7 @@ p {
 
   header & {
     max-inline-size: 100ch;
+    margin-bottom: 65px;
 
     @include mq($ps-mobile) {
       max-inline-size: none;

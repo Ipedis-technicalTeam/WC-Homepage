@@ -9,7 +9,7 @@ header {
     display: flex;
     align-items: flex-end;
     gap: rem(30);
-    margin-block-end: rem(60);
+    margin-block-end: 5rem;
     block-size: rem(70);
     padding-block: rem(10);
     background-color: $lightColor;
@@ -27,6 +27,7 @@ header {
     .logo-wrapper {
       inline-size: auto;
       block-size: 100%;
+      display: flex;
 
       .logo {
         block-size: 100%;

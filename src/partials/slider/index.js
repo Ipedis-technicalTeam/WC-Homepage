@@ -1,3 +1,3 @@
 module.exports = {
-  sliderPartialsPageNames: ['main'],
+  sliderPartialsPageNames: ['header', 'main'],
 };
