@@ -4,7 +4,7 @@
     <div class="container">
       <div class="ip-content demo-accordeon" slot="tab-content-1">
           <ip-accordeon
-            title-tag="h2"
+            title-tag="div"
             is-first-panel-open="true"
             is-single-open="true"
             accordeon-headers='[
@@ -15,11 +15,11 @@
             {"title": "Legislation"}
           ]'
           >
-            <div class="acc-content" slot="accordeon-1">
+            <div class="acc-content" slot="accordeon-1" role="region" aria-labelledby="accordion-1">
               <img class="acc-content__image" src="assets/images/tab-img-1.png" alt="" />
 
               <div class="acc-content__desc-wrapper">
-                <h3 class="acc-content__title">6 Bonnes Pratiques pour être en Conformité</h3>
+                <h3 class="acc-content__title">16 Bonnes Pratiques pour être en Conformité</h3>
                 <p class="acc-content__desc">
                   Aujourd&apos;hui, encore beaucoup de sites Web et d&apos;applications mobiles sont
                   conçus sans penser à la navigation des personnes en situation de handicap.
@@ -38,7 +38,7 @@
               </div>
             </div>
 
-            <div class="acc-content" slot="accordeon-2">
+            <div class="acc-content" slot="accordeon-2" role="region" aria-labelledby="accordion-2">
               <img class="acc-content__image" src="assets/images/tab-img-2.png" alt="" />
 
               <div class="acc-content__desc-wrapper">
@@ -62,7 +62,7 @@
               </div>
             </div>
 
-            <div class="acc-content" slot="accordeon-3">
+            <div class="acc-content" slot="accordeon-3" role="region" aria-labelledby="accordion-3">
               <img class="acc-content__image" src="assets/images/tab-img-3.png" alt="" />
 
               <div class="acc-content__desc-wrapper">
@@ -85,7 +85,7 @@
               </div>
             </div>
 
-            <div class="acc-content" slot="accordeon-4">
+            <div class="acc-content" slot="accordeon-4" role="region" aria-labelledby="accordion-4">
               <img class="acc-content__image" src="assets/images/tab-img-4.jpeg" alt="" />
 
               <div class="acc-content__desc-wrapper">
@@ -109,7 +109,7 @@
               </div>
             </div>
 
-            <div class="acc-content" slot="accordeon-5">
+            <div class="acc-content" slot="accordeon-5" role="region" aria-labelledby="accordion-5">
               <img class="acc-content__image" src="assets/images/tab-img-5.jpg" alt="" />
 
               <div class="acc-content__desc-wrapper">
