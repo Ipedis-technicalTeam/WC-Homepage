@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "webpack serve --open --live-reload --config webpack.dev.js",
-    "build": "rm -rf docs && webpack --config webpack.en.js"
+    "build": "webpack --config webpack.en.js"
   },
   "keywords": [
     "ipedis",

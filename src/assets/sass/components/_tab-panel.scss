@@ -38,6 +38,8 @@ ip-tab-panel {
     box-shadow: none;
     overflow: visible;
   }
+
+
 }
 
 .main-tab-panel {
@@ -59,6 +61,9 @@ ip-tab-panel {
     border: 2px solid darken($lightColor, 9);
     border-radius: em(4);
     padding: em(10);
+    text-align: center;
+    white-space: nowrap;
+
   }
 
   &::part(tab-icon) {
@@ -321,3 +326,40 @@ ip-tab-panel {
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .demo-tab-panel::part(tab-btn) {
+    text-align: center;
+    white-space: nowrap;
+  }
+  .demo-tab-panel::part(tab-container) {
+    flex-direction: column;
+  }
+  .demo-tab-panel > .ip-content .ip-content-subtitle {
+    font-size: 32px;
+  }
+  .demo-tab-panel > .ip-content .ip-content-desc {
+    margin: 0;
+  }
+  .demo-tab-panel > .ip-content .ip-content-title {
+    margin-block-start: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .demo-tab-panel > .ip-content {
+    flex-direction: column;
+    border-radius: 0;
+  }
+  .ip-content {
+    display: block;
+  }
+  .demo-tab-panel::part(tab-panel-title) {
+      margin-top: 0;
+  }
+}
+
+
+
+
+

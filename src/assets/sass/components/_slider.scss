@@ -59,3 +59,13 @@ ip-slider-sl-1::part(bullet-btn) {
 }
 
 
+@media (max-width: 1200px) {
+  ::part(left-btn) {
+    left: 0px!important;
+  }
+
+  ::part(right-btn) {
+    right: 0px!important;
+  }
+}
+
